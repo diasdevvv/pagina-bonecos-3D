@@ -68,11 +68,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-display font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[1.1] mb-[-15px] drop-shadow-2xl text-center max-w-4xl pt-2"
+          className="uppercase font-display font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[1.1] mb-[-15px] drop-shadow-2xl text-center max-w-4xl pt-2"
         >
-          Uma Coleção Única <br />Estilo <span className="text-[#006cb7]">LEGO3D</span>
-          <br />
-          Para sua Impressora 3D
+          Uma Coleção Única <br />Estilo <span className="text-[#006cb7] ">LEGO </span>
+
+          Para<br />sua Impressora 3D
           <br />
         </motion.h1>
         <br />
