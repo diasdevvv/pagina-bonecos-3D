@@ -18,7 +18,11 @@ export default function Hero() {
         <img
           src="/assets/images/lego_bg_pattern.webp"
           alt="Os Maiores Ícones em Versão Lego 3D STL"
+          width={1920}
+          height={1080}
           className="w-full h-full object-cover object-center brightness-105 contrast-105"
+          fetchPriority="high"
+          decoding="sync"
         />
 
         {/* Vinheta de Cima para Baixo para Destaque e Leitura Perfeita da Headline */}
@@ -31,11 +35,13 @@ export default function Hero() {
         initial={{ opacity: 0, x: -60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-        className="absolute left-0 top-[40%] sm:top-[45%] -translate-y-1/2 z-20 pointer-events-none overflow-hidden"
+        className="absolute right-[78%] top-[40%] sm:top-[45%] -translate-y-1/2 z-20 pointer-events-none overflow-hidden"
       >
         <img
           src="/assets/images/peeking_char_harry.webp"
           alt="Harry Potter Lego espiando"
+          width={350}
+          height={500}
           className="h-32 sm:h-48 md:h-60 lg:h-72 object-contain transform rotate-12 -translate-x-8 sm:-translate-x-12 md:-translate-x-16 drop-shadow-[0_15px_30px_rgba(0,0,0,0.95)]"
           loading="lazy"
           decoding="async"
@@ -47,11 +53,13 @@ export default function Hero() {
         initial={{ opacity: 0, x: 60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-        className="absolute right-0 top-[40%] sm:top-[45%] -translate-y-1/2 z-20 pointer-events-none overflow-hidden"
+        className="absolute right-[-33%] top-[40%] sm:top-[45%] -translate-y-1/2 z-20 pointer-events-none overflow-hidden"
       >
         <img
           src="/assets/images/peeking_char_ninja.webp"
           alt="Ninja Lego espiando"
+          width={350}
+          height={500}
           className="h-32 sm:h-48 md:h-60 lg:h-72 object-contain transform -rotate-12 translate-x-8 sm:translate-x-12 md:translate-x-16 drop-shadow-[0_15px_30px_rgba(0,0,0,0.95)]"
           loading="lazy"
           decoding="async"
@@ -92,6 +100,8 @@ export default function Hero() {
             <img
               src="/assets/images/hero_3d_printer_venom.webp"
               alt="Impressora 3D Bambu Lab imprimindo Venom Lego"
+              width={600}
+              height={600}
               className="w-full h-auto max-h-[280px] sm:max-h-[360px] md:max-h-[440px] object-contain mx-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.95)]"
               loading="lazy"
               decoding="async"
@@ -103,11 +113,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25 }}
-            className="flex items-end justify-center gap-1 sm:gap-2.5 md:gap-3.5 -mt-16 sm:-mt-24 md:-mt-28 -mb-3 sm:-mb-5 md:-mb-6 relative z-30 pointer-events-none mx-auto"
+            className="flex items-end justify-center gap-0 sm:gap-2.5 md:gap-3.5 -mt-16 sm:-mt-24 md:-mt-28 -mb-3 sm:-mb-5 md:-mb-6 relative z-30 pointer-events-none mx-auto"
           >
             <img
               src="/assets/images/hero_char_batman.webp"
               alt="Lego Batman 3D"
+              width={300}
+              height={400}
               className="h-16 sm:h-24 md:h-28 lg:h-32 object-contain drop-shadow-md"
               loading="lazy"
               decoding="async"
@@ -115,6 +127,8 @@ export default function Hero() {
             <img
               src="/assets/images/hero_char_wonderwoman.webp"
               alt="Lego Mulher Maravilha 3D"
+              width={300}
+              height={400}
               className="h-16 sm:h-24 md:h-28 lg:h-32 object-contain drop-shadow-md"
               loading="lazy"
               decoding="async"
@@ -122,6 +136,8 @@ export default function Hero() {
             <img
               src="/assets/images/hero_char_ironman.webp"
               alt="Lego Homem de Ferro 3D"
+              width={300}
+              height={400}
               className="h-16 sm:h-24 md:h-28 lg:h-32 object-contain drop-shadow-md"
               loading="lazy"
               decoding="async"
@@ -129,6 +145,8 @@ export default function Hero() {
             <img
               src="/assets/images/hero_char_blackwidow.webp"
               alt="Lego Viúva Negra 3D"
+              width={300}
+              height={400}
               className="h-16 sm:h-24 md:h-28 lg:h-32 object-contain drop-shadow-md"
               loading="lazy"
               decoding="async"
@@ -136,6 +154,8 @@ export default function Hero() {
             <img
               src="/assets/images/hero_char_deadpool.webp"
               alt="Lego Deadpool 3D"
+              width={300}
+              height={400}
               className="h-16 sm:h-24 md:h-28 lg:h-32 object-contain drop-shadow-md"
               loading="lazy"
               decoding="async"

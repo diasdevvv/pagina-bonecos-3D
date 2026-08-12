@@ -25,7 +25,9 @@ export default function BrandMarquee() {
               <img 
                 src={`/assets/images/${brand}`} 
                 alt={`Marca ${idx + 1}`} 
-                className="h-12 sm:h-16 md:h-20 w-auto object-contain brightness-0 invert transition-all duration-300 filter drop-shadow-[0_4px_12px_rgba(255,255,255,0.25)]" loading="lazy" decoding="async" />
+                width={160}
+                height={80}
+                className="h-12 sm:h-16 md:h-20 w-auto object-contain brightness-0 invert transition-all duration-300 filter drop-shadow-md" loading="lazy" decoding="async" />
             </div>
           ))}
         </div>

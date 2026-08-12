@@ -67,6 +67,8 @@ export default function PricingSection() {
                 <img
                   src="/assets/images/plano_start.webp"
                   alt="Bloco 3D Lego Azul - Plano Básico"
+                  width={300}
+                  height={300}
                   className="w-full max-w-[140px] md:max-w-[160px] h-auto object-contain drop-shadow-md pointer-events-none"
                   loading="lazy"
                   decoding="async"
@@ -130,11 +132,13 @@ export default function PricingSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="absolute left-0 top-[38%] -translate-y-1/2 z-20 pointer-events-none overflow-hidden"
+              className="absolute left-[-35%] top-[38%] -translate-y-1/2 z-20 pointer-events-none overflow-hidden"
             >
               <img
                 src="/assets/images/sports_f1_driver.webp"
                 alt="Piloto F1 Lego espiando"
+                width={320}
+                height={400}
                 className="h-28 sm:h-36 md:h-44 object-contain transform rotate-12 -translate-x-6 sm:-translate-x-8 md:-translate-x-10 drop-shadow-[0_12px_24px_rgba(0,0,0,0.95)]"
                 loading="lazy"
                 decoding="async"
@@ -147,11 +151,13 @@ export default function PricingSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="absolute right-0 top-[62%] -translate-y-1/2 z-20 pointer-events-none overflow-hidden"
+              className="absolute left-[80%] top-[62%] -translate-y-1/2 z-20 pointer-events-none overflow-hidden"
             >
               <img
                 src="/assets/images/sports_soccer_player.webp"
                 alt="Jogador de Futebol Lego espiando"
+                width={320}
+                height={400}
                 className="h-28 sm:h-36 md:h-44 object-contain transform -rotate-12 translate-x-6 sm:translate-x-8 md:translate-x-10 drop-shadow-[0_12px_24px_rgba(0,0,0,0.95)]"
                 loading="lazy"
                 decoding="async"
@@ -192,6 +198,8 @@ export default function PricingSection() {
                 <img
                   src="/assets/images/plano_full.webp"
                   alt="Modelos Exclusivos Lego 3D - Luffy e Harry Potter"
+                  width={600}
+                  height={600}
                   className="w-full max-w-[240px] md:max-w-[260px] h-auto object-contain drop-shadow-md pointer-events-none"
                   loading="lazy"
                   decoding="async"

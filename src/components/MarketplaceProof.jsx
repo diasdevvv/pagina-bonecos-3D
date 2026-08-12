@@ -41,6 +41,8 @@ export default function MarketplaceProof() {
                 <img 
                   src={`/assets/images/${item.img}`} 
                   alt={item.title} 
+                  width={400}
+                  height={300}
                   className="w-full h-full object-cover" loading="lazy" decoding="async" />
               </div>
               <div className="p-5 flex flex-col justify-between">

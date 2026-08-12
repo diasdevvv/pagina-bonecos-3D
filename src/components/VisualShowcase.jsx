@@ -72,12 +72,16 @@ export default function VisualShowcase() {
           <img
             src="/assets/images/marvel_studios_official.webp"
             alt="Marvel Studios Logo"
+            width={300}
+            height={120}
             className="h-16 sm:h-24 md:h-32 lg:h-36 w-auto object-contain drop-shadow-md" loading="lazy" decoding="async" />
 
           {/* Logo DC */}
           <img
             src="/assets/images/dc_logo.webp"
             alt="DC Comics Logo"
+            width={150}
+            height={60}
             className="h-10 sm:h-14 md:h-18 lg:h-20 w-auto object-contain drop-shadow-md" loading="lazy" decoding="async" />
         </motion.div>
 
@@ -121,6 +125,8 @@ export default function VisualShowcase() {
             <img
               src="/assets/images/naruto_rasengan_flipped.webp"
               alt="LEGO Naruto Rasengan 3D"
+              width={500}
+              height={533}
               className="w-full h-auto object-contain" loading="lazy" decoding="async" />
           </motion.div>
         </motion.div>

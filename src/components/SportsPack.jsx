@@ -59,6 +59,8 @@ export default function SportsPack() {
               <img
                 src="/assets/images/sports_f1_car.webp"
                 alt="Carro de F1 LEGO 3D Ferrari"
+                width={500}
+                height={400}
                 className="w-full h-auto object-contain"
               />
             </motion.div>
@@ -74,6 +76,8 @@ export default function SportsPack() {
               <img
                 src="/assets/images/sports_f1_driver.webp"
                 alt="Piloto F1 Minifigura LEGO 3D"
+                width={320}
+                height={400}
                 className="w-full h-auto object-contain"
               />
             </motion.div>
@@ -92,6 +96,8 @@ export default function SportsPack() {
               <img
                 src="/assets/images/sports_trophy.webp"
                 alt="Taça da Copa do Mundo FIFA LEGO 3D"
+                width={400}
+                height={400}
                 className="w-full h-auto object-contain"
               />
             </motion.div>
@@ -107,6 +113,8 @@ export default function SportsPack() {
               <img
                 src="/assets/images/sports_soccer_player.webp"
                 alt="Jogador de Futebol Minifigura LEGO 3D"
+                width={320}
+                height={400}
                 className="w-full h-auto object-contain"
               />
             </motion.div>

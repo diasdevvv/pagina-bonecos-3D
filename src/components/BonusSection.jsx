@@ -101,6 +101,8 @@ export default function BonusSection() {
                 <img 
                   src={`/assets/images/${bonus.img}`} 
                   alt={bonus.title} 
+                  width={300}
+                  height={300}
                   className="w-full max-w-[150px] sm:max-w-[170px] md:max-w-[180px] h-[140px] sm:h-[160px] md:h-[170px] object-contain my-1 drop-shadow-md pointer-events-none block" 
                   loading="lazy" 
                   decoding="async" 

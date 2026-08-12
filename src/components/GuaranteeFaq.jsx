@@ -50,6 +50,8 @@ export default function GuaranteeFaq() {
               <img 
                 src="/assets/images/garantia.webp" 
                 alt="Selo de Garantia 7 Dias" 
+                width={300}
+                height={300}
                 className="w-full h-full object-contain drop-shadow-[0_10px_25px_rgba(0,108,183,0.4)]" loading="lazy" decoding="async" />
             </div>
 
