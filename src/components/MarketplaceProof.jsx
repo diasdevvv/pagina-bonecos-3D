@@ -41,7 +41,7 @@ export default function MarketplaceProof() {
                 <img 
                   src={`/assets/images/${item.img}`} 
                   alt={item.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+                  className="w-full h-full object-cover" loading="lazy" decoding="async" />
               </div>
               <div className="p-5 flex flex-col justify-between">
                 <h3 className="text-white font-bold text-base mb-2">{item.title}</h3>
@@ -57,7 +57,7 @@ export default function MarketplaceProof() {
         <div className="text-center">
           <a 
             href="#oferta" 
-            className="inline-block bg-[#e52521] hover:bg-[#c81916] text-white font-display font-black uppercase text-sm md:text-base py-4 px-10 rounded-none shadow-2xl transition-transform hover:scale-105 border-2 border-white/20"
+            className="inline-block bg-[#e52521] hover:bg-[#c81916] text-white font-display font-black uppercase text-sm md:text-base py-4 px-10 rounded-none shadow-2xl transition-colors border-2 border-white/20"
           >
             DESBLOQUEAR MEU ACESSO AGORA →
           </a>

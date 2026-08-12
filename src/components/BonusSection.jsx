@@ -63,7 +63,7 @@ export default function BonusSection() {
         </p>
 
         {/* Banner Indicador de Bônus Exclusivos */}
-        <div className="inline-flex items-center justify-center gap-3 px-8 py-3 bg-gradient-to-r from-[#e52521] via-[#006cb7] to-[#e52521] text-white font-black font-display text-xl md:text-3xl uppercase tracking-widest mb-12 shadow-[0_0_40px_rgba(229,37,33,0.4)] hover:scale-105 transition-transform duration-300 border-2 border-white/20">
+        <div className="inline-flex items-center justify-center gap-3 px-8 py-3 bg-gradient-to-r from-[#e52521] via-[#006cb7] to-[#e52521] text-white font-black font-display text-xl md:text-3xl uppercase tracking-widest mb-12 shadow-lg border-2 border-white/20">
           <span>4 BÔNUS EXCLUSIVOS</span>
           <span className="text-2xl md:text-3xl leading-none -mt-1">🎁</span>
         </div>
@@ -76,15 +76,15 @@ export default function BonusSection() {
             return (
               <div 
                 key={idx} 
-                className={`bg-white/5 border rounded-2xl p-6 sm:p-8 flex flex-col items-center justify-center text-center hover:bg-white/10 backdrop-blur-md group overflow-hidden transition-all duration-300 ${
+                className={`bg-white/5 border rounded-2xl p-6 sm:p-8 flex flex-col items-center justify-center text-center backdrop-blur-md overflow-hidden transition-all duration-300 ${
                   isLast 
-                    ? 'border-t-2 border-t-yellow-400/80 border-yellow-500/40 hover:border-yellow-400 shadow-[0_0_35px_rgba(234,179,8,0.3)] hover:shadow-[0_0_65px_rgba(234,179,8,0.6)]' 
-                    : 'border-white/15 border-t-2 border-t-[#006cb7]/70 hover:border-[#006cb7] shadow-[0_0_30px_rgba(0,108,183,0.2)] hover:shadow-[0_0_60px_rgba(0,108,183,0.45)]'
+                    ? 'border-t-2 border-t-yellow-400/80 border-yellow-500/40 shadow-lg shadow-yellow-500/10' 
+                    : 'border-white/15 border-t-2 border-t-[#006cb7]/70 shadow-lg shadow-blue-500/10'
                 }`}
               >
                 {/* Badge Bônus (Azul para 1-3, Dourado para 4) */}
-                <span className={`font-black font-display text-2xl md:text-4xl mb-3 tracking-widest group-hover:scale-105 transition-transform duration-300 ${
-                  isLast ? 'text-yellow-400 drop-shadow-[0_0_15px_rgba(234,179,8,0.6)]' : 'text-[#006cb7] drop-shadow-lg'
+                <span className={`font-black font-display text-2xl md:text-4xl mb-3 tracking-widest ${
+                  isLast ? 'text-yellow-400 drop-shadow' : 'text-[#006cb7] drop-shadow'
                 }`}>
                   {bonus.badge}
                 </span>
@@ -101,7 +101,7 @@ export default function BonusSection() {
                 <img 
                   src={`/assets/images/${bonus.img}`} 
                   alt={bonus.title} 
-                  className="w-full max-w-[150px] sm:max-w-[170px] md:max-w-[180px] h-[140px] sm:h-[160px] md:h-[170px] object-contain my-1 group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_10px_20px_rgba(0,0,0,0.85)] pointer-events-none block" 
+                  className="w-full max-w-[150px] sm:max-w-[170px] md:max-w-[180px] h-[140px] sm:h-[160px] md:h-[170px] object-contain my-1 drop-shadow-md pointer-events-none block" 
                   loading="lazy" 
                   decoding="async" 
                 />

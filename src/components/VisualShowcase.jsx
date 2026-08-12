@@ -72,13 +72,13 @@ export default function VisualShowcase() {
           <img
             src="/assets/images/marvel_studios_official.webp"
             alt="Marvel Studios Logo"
-            className="h-16 sm:h-24 md:h-32 lg:h-36 w-auto object-contain filter drop-shadow-[0_8px_30px_rgba(229,37,33,0.95)] hover:scale-105 transition-transform" loading="lazy" decoding="async" />
+            className="h-16 sm:h-24 md:h-32 lg:h-36 w-auto object-contain drop-shadow-md" loading="lazy" decoding="async" />
 
           {/* Logo DC */}
           <img
             src="/assets/images/dc_logo.webp"
             alt="DC Comics Logo"
-            className="h-10 sm:h-14 md:h-18 lg:h-20 w-auto object-contain filter drop-shadow-[0_6px_20px_rgba(255,255,255,0.45)] hover:scale-105 transition-transform" loading="lazy" decoding="async" />
+            className="h-10 sm:h-14 md:h-18 lg:h-20 w-auto object-contain drop-shadow-md" loading="lazy" decoding="async" />
         </motion.div>
 
         {/* Conteúdo Textual em Destaque à Direita (Sem vãos, alinhado e responsivo) */}
@@ -164,7 +164,7 @@ export default function VisualShowcase() {
           {famousAnimes.map((anime, idx) => (
             <div
               key={idx}
-              className="bg-[#ffffff] rounded-none px-4 py-2 shadow-[0_6px_16px_rgba(0,0,0,0.95)] transform hover:scale-103 transition-transform cursor-default flex justify-center items-center text-center"
+              className="bg-[#ffffff] rounded-none px-4 py-2 shadow-md cursor-default flex justify-center items-center text-center"
             >
               <span className="bg-[#e52521] bg-gradient-to-r from-black via-[#1c0404] to-[#800c0c] bg-clip-text text-transparent font-beast text-base sm:text-lg md:text-xl uppercase tracking-tighter leading-none font-extrabold">
                 {anime}

@@ -76,7 +76,7 @@ export default function HowItWorks() {
               className={`bg-white/5 border border-white/15 rounded-2xl p-6 sm:p-8 flex flex-col items-center text-center backdrop-blur-md relative z-10 transition-all duration-300 shadow-xl group ${step.accentBorder}`}
             >
               {/* Ícone */}
-              <div className="w-16 h-16 rounded-2xl bg-black/60 border border-[#006cb7]/30 flex items-center justify-center mb-5 shadow-inner group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 rounded-2xl bg-black/60 border border-[#006cb7]/30 flex items-center justify-center mb-5 shadow-inner">
                 {step.icon}
               </div>
 

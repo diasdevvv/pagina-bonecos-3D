@@ -24,6 +24,13 @@ html, body, #root {
   }
 }
 
+/* Fix para bug de brilho/sombra quadrada em navegadores mobile (WebKit/iOS/Chrome Mobile) */
+img, svg, [class*="drop-shadow"] {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+}
+
 /* Fonte Impactante / Beastly Display */
 .font-beast {
   font-family: 'Anton', 'Bebas Neue', sans-serif;

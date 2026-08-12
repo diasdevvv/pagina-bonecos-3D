@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { trackInitiateCheckout } from '../utils/metaPixel';
 
 export default function PricingSection() {
+  // Lógica do Timer Contagem Regressiva até o Fim do Dia (23:59:59)
+  const calculateTimeLeft = () => {
+    const now = new Date();
+    const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
+    const difference = Math.max(0, Math.floor((endOfDay - now) / 1000));
+
+    const hours = String(Math.floor(difference / 3600)).padStart(2, '0');
+    const minutes = String(Math.floor((difference % 3600) / 60)).padStart(2, '0');
+    const seconds = String(difference % 60).padStart(2, '0');
+
+    return { hours, minutes, seconds };
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   const handleCheckoutClick = (e, planName, price, targetUrl) => {
     e.preventDefault();
     const finalUrl = trackInitiateCheckout(planName, price, targetUrl);
@@ -12,9 +35,9 @@ export default function PricingSection() {
     <section id="oferta" className="py-16 md:py-24 bg-black border-b border-white/10 relative overflow-hidden">
       {/* Fundo de Blocos LEGO P&B com 25% de visibilidade */}
       <div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden">
-        <img 
-          src="/assets/images/lego_studs_bg.webp" 
-          alt="LEGO Bricks Background" 
+        <img
+          src="/assets/images/lego_studs_bg.webp"
+          alt="LEGO Bricks Background"
           className="w-full h-full object-cover grayscale brightness-50 contrast-110 opacity-25" loading="lazy" decoding="async" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
       </div>
@@ -41,10 +64,10 @@ export default function PricingSection() {
 
               {/* Imagem de Destaque do Bloco Lego Azul no Plano Start (Reduzida 20%) */}
               <div className="w-full pt-3 px-6 flex justify-center items-center">
-                <img 
-                  src="/assets/images/plano_start.webp" 
-                  alt="Bloco 3D Lego Azul - Plano Básico" 
-                  className="w-full max-w-[140px] md:max-w-[160px] h-auto object-contain drop-shadow-[0_10px_20px_rgba(0,108,183,0.35)] hover:scale-105 transition-transform duration-300 pointer-events-none"
+                <img
+                  src="/assets/images/plano_start.webp"
+                  alt="Bloco 3D Lego Azul - Plano Básico"
+                  className="w-full max-w-[140px] md:max-w-[160px] h-auto object-contain drop-shadow-md pointer-events-none"
                   loading="lazy"
                   decoding="async"
                 />
@@ -74,7 +97,7 @@ export default function PricingSection() {
                 onClick={(e) => handleCheckoutClick(e, 'PACOTE BÁSICO', 17.90, 'https://pay.wiapy.com/lY5XgbuCSOwG')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-[#006cb7] hover:bg-[#0055bf] text-white font-display font-black uppercase text-center text-sm py-4 px-6 rounded-none transition-transform hover:scale-105 shadow-lg cursor-pointer"
+                className="block w-full bg-[#006cb7] hover:bg-[#0055bf] text-white font-display font-black uppercase text-center text-sm py-4 px-6 rounded-none transition-colors shadow-lg cursor-pointer"
               >
                 QUERO O PACOTE BÁSICO
               </a>
@@ -85,7 +108,7 @@ export default function PricingSection() {
                   Atenção: temos uma oferta ainda mais vantajosa para você! Veja logo abaixo
                 </p>
 
-                <motion.div 
+                <motion.div
                   animate={{ y: [0, 8, 0] }}
                   transition={{ duration: 0.9, repeat: Infinity, ease: "easeInOut" }}
                   className="mt-3 text-[#ff5252] flex justify-center"
@@ -98,12 +121,47 @@ export default function PricingSection() {
             </div>
           </div>
 
-          {/* Plano Completo - R$ 37,90 (ACESSO PRO 3D) */}
+          {/* Plano Completo - R$ 37,90 (ACESSO 3D PRO) */}
           <div className="w-full max-w-md bg-[#0F0F14]/90 backdrop-blur-md border-2 border-[#e52521] rounded-none overflow-hidden relative shadow-2xl flex flex-col justify-between transform lg:-translate-y-4">
+            {/* Personagens Espiando nas Laterais do Card ACESSO 3D PRO */}
+            {/* Piloto F1 espiando no canto esquerdo */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="absolute left-0 top-[38%] -translate-y-1/2 z-20 pointer-events-none overflow-hidden"
+            >
+              <img
+                src="/assets/images/sports_f1_driver.webp"
+                alt="Piloto F1 Lego espiando"
+                className="h-28 sm:h-36 md:h-44 object-contain transform rotate-12 -translate-x-6 sm:-translate-x-8 md:-translate-x-10 drop-shadow-[0_12px_24px_rgba(0,0,0,0.95)]"
+                loading="lazy"
+                decoding="async"
+              />
+            </motion.div>
+
+            {/* Jogador de Futebol espiando no canto direito */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="absolute right-0 top-[62%] -translate-y-1/2 z-20 pointer-events-none overflow-hidden"
+            >
+              <img
+                src="/assets/images/sports_soccer_player.webp"
+                alt="Jogador de Futebol Lego espiando"
+                className="h-28 sm:h-36 md:h-44 object-contain transform -rotate-12 translate-x-6 sm:translate-x-8 md:translate-x-10 drop-shadow-[0_12px_24px_rgba(0,0,0,0.95)]"
+                loading="lazy"
+                decoding="async"
+              />
+            </motion.div>
+
             <div>
               <div className="py-6 text-center relative bg-gradient-to-b from-[#1e1414] to-[#0F0F14]">
                 <h3 className="text-white font-display font-black text-2xl md:text-3xl uppercase tracking-tighter relative z-10">
-                  ACESSO <span className="text-[#e52521]">PRO 3D</span>
+                  ACESSO <span className="text-[#e52521]">3D PRO</span>
                 </h3>
               </div>
 
@@ -114,12 +172,27 @@ export default function PricingSection() {
                 </p>
               </div>
 
+              {/* Timer Contagem Regressiva para o Fim do Dia */}
+              <div className="bg-black/90 border-y border-[#e52521]/40 py-2 px-3 flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-3 text-center shadow-inner">
+                <span className="text-[#e52521] font-black text-xs uppercase tracking-wider flex items-center gap-1.5">
+                  <span className="inline-block w-2 h-2 rounded-full bg-[#e52521] animate-ping" />
+                  OFERTA EXPIRA EM:
+                </span>
+                <div className="flex items-center gap-1 font-mono font-black text-white text-sm sm:text-base">
+                  <span className="bg-[#e52521] text-white px-2 py-0.5 rounded-none font-mono font-black shadow-md">{timeLeft.hours}h</span>
+                  <span className="text-[#e52521] font-black">:</span>
+                  <span className="bg-[#e52521] text-white px-2 py-0.5 rounded-none font-mono font-black shadow-md">{timeLeft.minutes}m</span>
+                  <span className="text-[#e52521] font-black">:</span>
+                  <span className="bg-[#e52521] text-white px-2 py-0.5 rounded-none font-mono font-black shadow-md">{timeLeft.seconds}s</span>
+                </div>
+              </div>
+
               {/* Imagem de Destaque das Cabeças Lego no Plano Full */}
               <div className="w-full pt-4 px-6 flex justify-center items-center">
-                <img 
-                  src="/assets/images/plano_full.webp" 
-                  alt="Modelos Exclusivos Lego 3D - Luffy e Harry Potter" 
-                  className="w-full max-w-[240px] md:max-w-[260px] h-auto object-contain drop-shadow-[0_12px_24px_rgba(229,37,33,0.4)] hover:scale-105 transition-transform duration-300 pointer-events-none"
+                <img
+                  src="/assets/images/plano_full.webp"
+                  alt="Modelos Exclusivos Lego 3D - Luffy e Harry Potter"
+                  className="w-full max-w-[240px] md:max-w-[260px] h-auto object-contain drop-shadow-md pointer-events-none"
                   loading="lazy"
                   decoding="async"
                 />
@@ -139,43 +212,43 @@ export default function PricingSection() {
 
                 <ul className="w-full text-left flex flex-col gap-3 text-sm text-white/90 font-medium border-t border-white/10 pt-6 mb-6">
                   <li className="flex items-center gap-3">
-                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span> 
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
                     <span className="leading-tight font-bold text-white">+450 Modelos LEGO STL/3MF</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span> 
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
                     <span className="leading-tight text-white font-semibold">Coleção F1 Corrida</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span> 
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
                     <span className="leading-tight text-white font-semibold">Coleção Copa do Mundo 2026 + Taça</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span> 
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
                     <span className="leading-tight text-white font-semibold">Coleção Super Heróis, Anime & Star Wars</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span> 
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
                     <span className="leading-tight text-white font-semibold">Coleção Ninjago</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span> 
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
                     <span className="leading-tight text-white font-semibold">Coleção Invencível</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span> 
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
                     <span className="leading-tight text-white font-semibold">Coleção Pokémon</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span> 
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
                     <span className="leading-tight text-white font-semibold">Coleção Desenhos Clássicos</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span> 
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
                     <span className="leading-tight text-white font-semibold">+ Diversas Coleções Inclusas</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span> 
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
                     <span className="leading-tight text-yellow-400 font-bold">Atualizações Mensais (NOVAS COLEÇÕES)</span>
                   </li>
 
@@ -205,19 +278,19 @@ export default function PricingSection() {
             <div className="p-6 md:p-8 pt-0 flex flex-col items-center">
               <a
                 href="https://pay.wiapy.com/vhnff1UKkDp-"
-                onClick={(e) => handleCheckoutClick(e, 'ACESSO PRO 3D', 37.90, 'https://pay.wiapy.com/vhnff1UKkDp-')}
+                onClick={(e) => handleCheckoutClick(e, 'ACESSO 3D PRO', 37.90, 'https://pay.wiapy.com/vhnff1UKkDp-')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-[#e52521] hover:bg-[#c81916] text-white font-display font-black uppercase text-center text-base md:text-lg py-4 px-6 rounded-none transition-transform hover:scale-105 shadow-2xl border-2 border-white/20 cursor-pointer"
+                className="block w-full bg-[#e52521] hover:bg-[#c81916] text-white font-display font-black uppercase text-center text-base md:text-lg py-4 px-6 rounded-none transition-colors shadow-2xl border-2 border-white/20 cursor-pointer"
               >
                 QUERO A PROMOÇÃO
               </a>
 
               {/* Imagem de Métodos e Informações de Pagamento */}
               <div className="w-full mt-4 flex justify-center items-center">
-                <img 
-                  src="/assets/images/payment_methods.webp" 
-                  alt="Formas de Pagamento - Wiapy, PIX, Visa, Mastercard" 
+                <img
+                  src="/assets/images/payment_methods.webp"
+                  alt="Formas de Pagamento - Wiapy, PIX, Visa, Mastercard"
                   className="w-full max-w-[280px] h-auto object-contain opacity-90 brightness-110"
                   loading="lazy"
                   decoding="async"

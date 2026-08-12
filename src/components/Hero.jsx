@@ -108,35 +108,35 @@ export default function Hero() {
             <img
               src="/assets/images/hero_char_batman.webp"
               alt="Lego Batman 3D"
-              className="h-16 sm:h-24 md:h-28 lg:h-32 object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.95)] transform hover:scale-105 transition-transform"
+              className="h-16 sm:h-24 md:h-28 lg:h-32 object-contain drop-shadow-md"
               loading="lazy"
               decoding="async"
             />
             <img
               src="/assets/images/hero_char_wonderwoman.webp"
               alt="Lego Mulher Maravilha 3D"
-              className="h-16 sm:h-24 md:h-28 lg:h-32 object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.95)] transform hover:scale-105 transition-transform"
+              className="h-16 sm:h-24 md:h-28 lg:h-32 object-contain drop-shadow-md"
               loading="lazy"
               decoding="async"
             />
             <img
               src="/assets/images/hero_char_ironman.webp"
               alt="Lego Homem de Ferro 3D"
-              className="h-16 sm:h-24 md:h-28 lg:h-32 object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.95)] transform hover:scale-105 transition-transform"
+              className="h-16 sm:h-24 md:h-28 lg:h-32 object-contain drop-shadow-md"
               loading="lazy"
               decoding="async"
             />
             <img
               src="/assets/images/hero_char_blackwidow.webp"
               alt="Lego Viúva Negra 3D"
-              className="h-16 sm:h-24 md:h-28 lg:h-32 object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.95)] transform hover:scale-105 transition-transform"
+              className="h-16 sm:h-24 md:h-28 lg:h-32 object-contain drop-shadow-md"
               loading="lazy"
               decoding="async"
             />
             <img
               src="/assets/images/hero_char_deadpool.webp"
               alt="Lego Deadpool 3D"
-              className="h-16 sm:h-24 md:h-28 lg:h-32 object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.95)] transform hover:scale-105 transition-transform"
+              className="h-16 sm:h-24 md:h-28 lg:h-32 object-contain drop-shadow-md"
               loading="lazy"
               decoding="async"
             />
