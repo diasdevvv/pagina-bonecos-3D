@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  background-color: #050507 !important;
+  color: #ffffff !important;
+  min-height: 100vh;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+    background-color: #050507 !important;
+    color: #ffffff !important;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: #050507 !important;
+  }
+}
+
+/* Fonte Impactante / Beastly Display */
+.font-beast {
+  font-family: 'Anton', 'Bebas Neue', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.subheadline {
+  font-size: small;
+  font-weight: bold;
+  padding: 3px 10px;
+  border-radius: 10px 0px 10px 0px;
+  background-color: #00a6ff;
+  text-transform: uppercase;
+  position: relative;
+  bottom: 15px;
+  letter-spacing: 5px;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: rgba(15, 15, 20, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #006cb7;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e52521;
+}
+
+/* Marquee Tracks (Movimento Contínuo Ininterrupto) */
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  width: 100%;
+  pointer-events: none;
+}
+
+.marquee-track-left {
+  display: flex;
+  flex-shrink: 0;
+  gap: 1.5rem;
+  min-width: 100%;
+  animation: marqueeLeft 22s linear infinite !important;
+  animation-play-state: running !important;
+}
+
+.marquee-track-right {
+  display: flex;
+  flex-shrink: 0;
+  gap: 1.5rem;
+  min-width: 100%;
+  animation: marqueeRight 22s linear infinite !important;
+  animation-play-state: running !important;
+}
+
+@keyframes marqueeLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeRight {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
