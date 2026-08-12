@@ -18,7 +18,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#050507] text-white selection:bg-[#e52521] selection:text-white pb-20 md:pb-24">
+    <div className="min-h-screen bg-[#050507] text-white selection:bg-[#e52521] selection:text-white pb-20 md:pb-24 overflow-x-hidden w-full max-w-[100vw] relative">
       <HeaderBar />
       <Hero />
       <BrandMarquee />

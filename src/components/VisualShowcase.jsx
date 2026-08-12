@@ -37,7 +37,7 @@ export default function VisualShowcase() {
             visible: { opacity: 1, x: 0, rotate: 0, transition: { duration: 2.4, ease: [0.16, 1, 0.3, 1] } }
           }}
           style={{ transformOrigin: 'top left' }}
-          className="absolute top-0 left-0 sm:left-4 md:left-8 lg:left-12 z-30 w-48 sm:w-64 md:w-88 lg:w-[420px] max-w-[46vw] pointer-events-none drop-shadow-[0_25px_50px_rgba(0,0,0,0.95)]"
+          className="absolute top-0 left-0 sm:left-4 lg:left-12 z-30 w-48 sm:w-64 lg:w-[420px] max-w-[46vw] pointer-events-none drop-shadow-[0_25px_50px_rgba(0,0,0,0.95)]"
         >
           {/* Container Interno de Pêndulo Idle */}
           <motion.div
@@ -66,7 +66,7 @@ export default function VisualShowcase() {
             hidden: { opacity: 0, x: -30 },
             visible: { opacity: 1, x: 0, transition: { duration: 0.8, delay: 0.3 } }
           }}
-          className="absolute bottom-2 sm:bottom-4 md:bottom-6 left-4 sm:left-8 md:left-12 z-40 flex items-center gap-4 sm:gap-6 md:gap-8 pointer-events-none"
+          className="absolute bottom-2 sm:bottom-4 lg:bottom-6 left-4 sm:left-8 lg:left-12 z-40 flex items-center gap-4 sm:gap-6 lg:gap-8 pointer-events-none"
         >
           {/* Nova Logo MARVEL Studios empilhada */}
           <img
@@ -74,7 +74,7 @@ export default function VisualShowcase() {
             alt="Marvel Studios Logo"
             width={300}
             height={120}
-            className="h-16 sm:h-24 md:h-32 lg:h-36 w-auto object-contain drop-shadow-md" loading="lazy" decoding="async" />
+            className="h-12 sm:h-16 md:h-20 lg:h-28 w-auto object-contain drop-shadow-md" loading="lazy" decoding="async" />
 
           {/* Logo DC */}
           <img
@@ -82,7 +82,7 @@ export default function VisualShowcase() {
             alt="DC Comics Logo"
             width={150}
             height={60}
-            className="h-10 sm:h-14 md:h-18 lg:h-20 w-auto object-contain drop-shadow-md" loading="lazy" decoding="async" />
+            className="h-8 sm:h-10 md:h-12 lg:h-16 w-auto object-contain drop-shadow-md" loading="lazy" decoding="async" />
         </motion.div>
 
         {/* Conteúdo Textual em Destaque à Direita (Sem vãos, alinhado e responsivo) */}
@@ -107,7 +107,7 @@ export default function VisualShowcase() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="absolute -top-24 sm:-top-36 md:-top-48 lg:-top-52 right-0 md:right-4 z-40 w-56 sm:w-80 md:w-[440px] max-w-[50vw] pointer-events-none drop-shadow-[0_25px_50px_rgba(0,108,183,0.9)]"
+          className="absolute -top-24 sm:-top-36 lg:-top-52 right-0 md:right-4 z-40 w-56 sm:w-72 lg:w-[440px] max-w-[50vw] pointer-events-none drop-shadow-[0_25px_50px_rgba(0,108,183,0.9)]"
         >
           <motion.div
             animate={{
@@ -137,7 +137,7 @@ export default function VisualShowcase() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 left-4 sm:left-12 md:left-24 z-30 w-52 sm:w-72 md:w-96 -rotate-[15deg] pointer-events-none drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)]"
+          className="absolute -bottom-4 sm:-bottom-6 lg:-bottom-8 left-4 sm:left-12 lg:left-24 z-30 w-52 sm:w-72 lg:w-96 -rotate-[15deg] pointer-events-none drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)]"
         >
           <motion.div
             animate={{

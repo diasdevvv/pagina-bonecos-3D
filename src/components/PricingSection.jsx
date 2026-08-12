@@ -52,9 +52,9 @@ export default function PricingSection() {
           </p>
         </div>
 
-        <div className="w-full max-w-5xl mx-auto flex flex-col lg:flex-row items-stretch justify-center gap-8 lg:gap-8">
+        <div className="w-full max-w-5xl mx-auto flex flex-col items-center justify-center gap-8 lg:flex-row lg:items-stretch">
           {/* Plano Básico - R$ 17,90 */}
-          <div className="w-full max-w-md bg-[#0F0F14]/90 backdrop-blur-md border-2 border-white/20 rounded-none overflow-hidden relative shadow-xl flex flex-col justify-between">
+          <div className="w-full max-w-md mx-auto bg-[#0F0F14]/90 backdrop-blur-md border-2 border-white/20 rounded-none overflow-hidden relative shadow-xl flex flex-col justify-between">
             <div>
               <div className="py-6 text-center bg-black/50 border-b border-white/10">
                 <h3 className="text-white font-display font-black text-2xl uppercase tracking-tighter">
@@ -124,7 +124,7 @@ export default function PricingSection() {
           </div>
 
           {/* Plano Completo - R$ 37,90 (ACESSO 3D PRO) */}
-          <div className="w-full max-w-md bg-[#0F0F14]/90 backdrop-blur-md border-2 border-[#e52521] rounded-none overflow-hidden relative shadow-2xl flex flex-col justify-between transform lg:-translate-y-4">
+          <div className="w-full max-w-md mx-auto bg-[#0F0F14]/90 backdrop-blur-md border-2 border-[#e52521] rounded-none overflow-hidden relative shadow-2xl flex flex-col justify-between transform lg:-translate-y-4">
             {/* Personagens Espiando nas Laterais do Card ACESSO 3D PRO */}
             {/* Piloto F1 espiando no canto esquerdo */}
             <motion.div
@@ -151,7 +151,7 @@ export default function PricingSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="absolute left-[80%] top-[62%] -translate-y-1/2 z-20 pointer-events-none overflow-hidden"
+              className="absolute right-[-35%] top-[62%] -translate-y-1/2 z-20 pointer-events-none overflow-hidden"
             >
               <img
                 src="/assets/images/sports_soccer_player.webp"

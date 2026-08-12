@@ -6,6 +6,9 @@ html, body, #root {
   background-color: #050507 !important;
   color: #ffffff !important;
   min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden !important;
 }
 
 @layer base {
@@ -14,11 +17,15 @@ html, body, #root {
     font-family: 'Inter', sans-serif;
     background-color: #050507 !important;
     color: #ffffff !important;
+    overflow-x: hidden !important;
+    max-width: 100vw;
   }
 
   body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     background-color: #050507 !important;
+    max-width: 100vw;
+    position: relative;
   }
 }
 

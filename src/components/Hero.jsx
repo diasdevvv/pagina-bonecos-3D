@@ -35,7 +35,7 @@ export default function Hero() {
         initial={{ opacity: 0, x: -60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-        className="absolute right-[78%] top-[40%] sm:top-[45%] -translate-y-1/2 z-20 pointer-events-none overflow-hidden"
+        className="absolute left-[-35%] top-[40%] sm:top-[45%] -translate-y-1/2 z-20 pointer-events-none overflow-hidden"
       >
         <img
           src="/assets/images/peeking_char_harry.webp"
@@ -53,7 +53,7 @@ export default function Hero() {
         initial={{ opacity: 0, x: 60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-        className="absolute right-[-33%] top-[40%] sm:top-[45%] -translate-y-1/2 z-20 pointer-events-none overflow-hidden"
+        className="absolute right-[-35%] top-[40%] sm:top-[45%] -translate-y-1/2 z-20 pointer-events-none overflow-hidden"
       >
         <img
           src="/assets/images/peeking_char_ninja.webp"

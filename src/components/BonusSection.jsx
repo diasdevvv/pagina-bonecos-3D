@@ -69,7 +69,7 @@ export default function BonusSection() {
         </div>
 
         {/* Cards de Bônus no Estilo Crocheverse (Azul para 1, 2, 3 e Dourado para o último) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 max-w-md lg:max-w-4xl mx-auto">
           {bonuses.map((bonus, idx) => {
             const isLast = idx === bonuses.length - 1;
             

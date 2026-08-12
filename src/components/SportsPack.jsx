@@ -54,7 +54,7 @@ export default function SportsPack() {
                 hidden: { opacity: 0, x: -140 },
                 visible: { opacity: 1, x: 0, transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1], delay: 0.0 } }
               }}
-              className="absolute -left-16 sm:-left-28 md:-left-40 lg:-left-52 bottom-[25px] sm:bottom-[35px] md:bottom-[45px] z-10 w-[570px] sm:w-[900px] md:w-[1200px] lg:w-[1560px] max-w-[85vw] drop-shadow-[0_15px_30px_rgba(0,0,0,0.85)]"
+              className="absolute -left-16 sm:-left-28 lg:-left-52 bottom-[25px] sm:bottom-[35px] lg:bottom-[45px] z-10 w-[570px] sm:w-[900px] lg:w-[1560px] max-w-[85vw] drop-shadow-[0_15px_30px_rgba(0,0,0,0.85)]"
             >
               <img
                 src="/assets/images/sports_f1_car.webp"
@@ -71,7 +71,7 @@ export default function SportsPack() {
                 hidden: { opacity: 0, x: -140 },
                 visible: { opacity: 1, x: 0, transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1], delay: 0.25 } }
               }}
-              className="absolute -left-16 sm:-left-24 md:-left-36 lg:-left-44 bottom-8 sm:bottom-12 md:bottom-16 z-20 w-60 sm:w-96 md:w-[480px] lg:w-[560px] pointer-events-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.95)]"
+              className="absolute -left-16 sm:-left-24 lg:-left-44 bottom-8 sm:bottom-12 lg:bottom-16 z-20 w-60 sm:w-96 lg:w-[560px] pointer-events-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.95)]"
             >
               <img
                 src="/assets/images/sports_f1_driver.webp"
@@ -91,7 +91,7 @@ export default function SportsPack() {
                 hidden: { opacity: 0, x: 140 },
                 visible: { opacity: 1, x: 0, transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1], delay: 0.45 } }
               }}
-              className="absolute -right-3 sm:-right-14 md:-right-20 lg:-right-24 bottom-[35px] sm:bottom-[45px] md:bottom-[55px] z-10 w-56 sm:w-88 md:w-[460px] lg:w-[560px] max-w-[48vw] drop-shadow-[0_15px_30px_rgba(0,0,0,0.85)]"
+              className="absolute -right-3 sm:-right-14 lg:-right-24 bottom-[35px] sm:bottom-[45px] lg:bottom-[55px] z-10 w-56 sm:w-88 lg:w-[560px] max-w-[48vw] drop-shadow-[0_15px_30px_rgba(0,0,0,0.85)]"
             >
               <img
                 src="/assets/images/sports_trophy.webp"
@@ -108,7 +108,7 @@ export default function SportsPack() {
                 hidden: { opacity: 0, x: 140 },
                 visible: { opacity: 1, x: 0, transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1], delay: 0.65 } }
               }}
-              className="absolute -right-16 sm:-right-24 md:-right-36 lg:-right-44 bottom-8 sm:bottom-12 md:bottom-16 z-20 w-60 sm:w-96 md:w-[480px] lg:w-[560px] pointer-events-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.95)]"
+              className="absolute -right-16 sm:-right-24 lg:-right-44 bottom-8 sm:bottom-12 lg:bottom-16 z-20 w-60 sm:w-96 lg:w-[560px] pointer-events-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.95)]"
             >
               <img
                 src="/assets/images/sports_soccer_player.webp"
