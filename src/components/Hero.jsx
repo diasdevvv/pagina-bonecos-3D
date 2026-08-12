@@ -16,7 +16,7 @@ export default function Hero() {
       {/* ==================== FUNDO DA IMAGEM FULL-BLEED ==================== */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
         <img
-          src="/assets/images/hero_background.webp"
+          src="/assets/images/lego_bg_pattern.webp"
           alt="Os Maiores Ícones em Versão Lego 3D STL"
           className="w-full h-full object-cover object-center brightness-105 contrast-105"
         />
