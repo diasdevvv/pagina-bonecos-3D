@@ -5,6 +5,7 @@ import BrandMarquee from './components/BrandMarquee';
 import VisualShowcase from './components/VisualShowcase';
 import SportsPack from './components/SportsPack';
 import ModelCarousel from './components/ModelCarousel';
+import ResultsSection from './components/ResultsSection';
 import BonusSection from './components/BonusSection';
 import PricingSection from './components/PricingSection';
 import GuaranteeFaq from './components/GuaranteeFaq';
@@ -25,6 +26,7 @@ export default function App() {
       <VisualShowcase />
       <SportsPack />
       <ModelCarousel />
+      <ResultsSection />
       <BonusSection />
       <PricingSection />
       <GuaranteeFaq />

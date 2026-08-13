@@ -4,8 +4,7 @@ export default function BonusSection() {
   const bonuses = [
     {
       badge: 'BÔNUS 1',
-      title: 'Mini Curso de Impressão & Montagem 3D',
-      subtitle: 'Aprenda o passo a passo completo para fatiar, imprimir e encaixar suas peças 3D com perfeição sem falhas.',
+      title: 'CURSO DE IMPRESSÃO E FILAMENTO LEGO',
       img: 'bonus1.webp',
       value: 'R$ 97,00',
       color: 'bg-[#e52521]',
@@ -14,7 +13,6 @@ export default function BonusSection() {
     {
       badge: 'BÔNUS 2',
       title: 'Pack Construção',
-      subtitle: 'Imprima centenas de blocos diferenciados para construir seu próprio universo.',
       img: 'bonus5.webp',
       value: 'R$ 67,00',
       color: 'bg-[#006cb7]',
@@ -23,7 +21,6 @@ export default function BonusSection() {
     {
       badge: 'BÔNUS 3',
       title: '+100 Chaveiros 3D',
-      subtitle: 'Modelos 3D exclusivos de chaveiros dos personagens mais populares para faturar rápido!',
       img: 'bonus2.webp',
       value: 'R$ 47,00',
       color: 'bg-[#006cb7]',
@@ -32,7 +29,6 @@ export default function BonusSection() {
     {
       badge: 'BÔNUS 4',
       title: 'BÔNUS SECRETO',
-      subtitle: 'Um bônus surpresa exclusivo revelado imediatamente dentro da sua área de membros.',
       img: 'bonus4.webp',
       value: 'R$ 97,00',
       color: 'bg-[#e52521]',
@@ -89,13 +85,10 @@ export default function BonusSection() {
                   {bonus.badge}
                 </span>
 
-                {/* Título & Subtítulo */}
-                <h4 className="text-white text-xl sm:text-2xl font-bold uppercase mb-2 leading-tight tracking-wide">
+                {/* Título */}
+                <h4 className="text-white text-xl sm:text-2xl font-bold uppercase mb-4 leading-tight tracking-wide">
                   {bonus.title}
                 </h4>
-                <p className="text-white/70 text-xs sm:text-sm font-medium leading-relaxed mb-6 max-w-xs mx-auto">
-                  {bonus.subtitle}
-                </p>
 
                 {/* Imagem do Bônus em PNG Flutuante compacta/menor */}
                 <img 

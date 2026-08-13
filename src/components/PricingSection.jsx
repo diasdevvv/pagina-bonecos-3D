@@ -265,7 +265,7 @@ export default function PricingSection() {
                   {/* OS 4 BÔNUS ESPECÍFICOS COM IMAGEM PEQUENA AO LADO DO TÍTULO */}
                   <li className="flex items-center gap-3">
                     <img src="/assets/images/bonus1.webp" alt="Bônus 1" className="w-7 h-7 object-contain rounded-none shrink-0" loading="lazy" decoding="async" />
-                    <span className="leading-tight text-white font-bold">Bônus 1: Mini Curso de Impressão</span>
+                    <span className="leading-tight text-white font-bold">Bônus 1: CURSO DE IMPRESSÃO E FILAMENTO LEGO</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <img src="/assets/images/bonus5.webp" alt="Bônus 2" className="w-7 h-7 object-contain rounded-none shrink-0" loading="lazy" decoding="async" />

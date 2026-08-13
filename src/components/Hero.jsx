@@ -70,13 +70,12 @@ export default function Hero() {
       <div className="container mx-auto px-4 max-w-5xl relative z-20 text-center flex flex-col items-center justify-center">
 
         {/* 1. Título Principal (Headline) */}
-        <span className="subheadline">NOVIDADE</span>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="uppercase font-display font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[1.1] mb-[-15px] drop-shadow-2xl text-center max-w-4xl pt-2"
+          className="uppercase font-display font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[1.1] mb-[-15px] drop-shadow-2xl text-center max-w-4xl pt-0"
         >
           Uma Coleção Única <br />Estilo <span className="text-[#006cb7] ">LEGO </span>
 
@@ -85,7 +84,6 @@ export default function Hero() {
         </motion.h1>
         <br />
 
-        <span style={{ fontWeight: '200', opacity: '0.7' }}>Crie peças incriveis para sua coleção ou Venda suas criações nos maiores Marketplaces do Mercado.</span>
 
         {/* 2. CONTAINER DA IMPRESSORA + PERSONAGENS + CAIXA DE PREÇO + SUBTÍTULO INTEGRADO */}
         <div className="relative w-full max-w-lg mx-auto flex flex-col items-center justify-center my-2 sm:my-4">
@@ -193,7 +191,7 @@ export default function Hero() {
             {/* QUADRADO DE SUBTÍTULO ACOPLADO DISCRETAMENTE ABAIXO DA CAIXA DE PREÇO */}
             <div className="w-full bg-black/95 border-x-2 border-b-2 border-white/20 border-t border-white/10 px-4 py-3 text-center backdrop-blur-md rounded-none">
               <p className="text-white/75 text-xs sm:text-sm font-semibold leading-snug tracking-wide">
-                Arquivos STL/3MF dos Personagens mais amados formato Bloco 3D, testados e prontos para imprimir!
+                Arquivos STL/3MF dos Personagens mais icônicos estilo LEGO, testados e prontos para imprimir!
               </p>
             </div>
           </motion.div>

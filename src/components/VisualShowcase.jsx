@@ -88,13 +88,13 @@ export default function VisualShowcase() {
         {/* Conteúdo Textual em Destaque à Direita (Sem vãos, alinhado e responsivo) */}
         <div className="container mx-auto px-4 relative z-10 max-w-5xl flex flex-col items-end text-right pl-28 sm:pl-48 md:pl-72 pb-8 sm:pb-12 md:pb-16 pt-2">
           <span className="bg-[#e52521] text-white font-black font-display text-xs md:text-sm px-4 py-1.5 rounded-none uppercase tracking-widest mb-3 shadow-2xl">
-            OS MAIS FAMOSOS
+            QUALIDADE MÁXIMA
           </span>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-display font-black text-white uppercase tracking-tight leading-tight mb-4 drop-shadow-2xl">
-            MAIS DE <span className="text-[#006cb7]">450 MODELOS</span> DE PERSONAGENS & MINIFIGURAS
+            MAIS DE <span className="text-[#006cb7]">500 <br />MODELOS</span> DE PERSONAGENS <br /> PRONTOS
           </h2>
           <p className="text-white/90 text-sm md:text-lg font-medium max-w-xl leading-relaxed mb-4 drop-shadow-md">
-            Todos os personagens icônicos que seus clientes procuram, com encaixes perfeitos e prontos para impressão!
+            Todos os personagens que seus clientes procuram, com encaixes perfeitos e prontos para impressão!
           </p>
         </div>
       </motion.div>
@@ -185,10 +185,10 @@ export default function VisualShowcase() {
             ALTA LUCRATIVIDADE
           </span>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-display font-black text-white uppercase tracking-tight leading-tight mb-4 drop-shadow-2xl">
-            IMPRIMA <span className="text-[#e52521]">ANIMES & HERÓIS</span> EM ESCALA
+            IMPRESSÃO <span className="text-[#e52521]">ÚNICA</span> <br /> E <span className="text-[#006cb7]">LUCRATIVA</span>
           </h2>
           <p className="text-white/90 text-sm md:text-lg font-medium max-w-xl leading-relaxed mb-2 drop-shadow-md">
-            Arquivos 100% limpos, pré-configurados e fáceis de fatiar para qualquer impressora 3D FDM ou Resina!
+            Produza modelos de altíssima demanda com baixo custo de produção e venda com excelentes margens de lucro!
           </p>
         </div>
       </div>
