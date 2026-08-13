@@ -3,26 +3,33 @@ import { motion } from 'framer-motion';
 import { trackInitiateCheckout } from '../utils/metaPixel';
 
 export default function PricingSection() {
-  // Lógica do Timer Contagem Regressiva até o Fim do Dia (23:59:59)
-  const calculateTimeLeft = () => {
-    const now = new Date();
-    const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
-    const difference = Math.max(0, Math.floor((endOfDay - now) / 1000));
-
-    const hours = String(Math.floor(difference / 3600)).padStart(2, '0');
-    const minutes = String(Math.floor((difference % 3600) / 60)).padStart(2, '0');
-    const seconds = String(difference % 60).padStart(2, '0');
-
-    return { hours, minutes, seconds };
-  };
-
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [showTimer, setShowTimer] = useState(false);
+  const [timeLeft, setTimeLeft] = useState({ hours: '00', minutes: '00', seconds: '00' });
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
+    const updateTimer = () => {
+      const now = new Date();
+      const currentHour = now.getHours();
 
+      // Exibe o timer apenas após as 19:00 (19h em diante)
+      if (currentHour >= 19) {
+        setShowTimer(true);
+
+        const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
+        const difference = Math.max(0, Math.floor((endOfDay - now) / 1000));
+
+        const hours = String(Math.floor(difference / 3600)).padStart(2, '0');
+        const minutes = String(Math.floor((difference % 3600) / 60)).padStart(2, '0');
+        const seconds = String(difference % 60).padStart(2, '0');
+
+        setTimeLeft({ hours, minutes, seconds });
+      } else {
+        setShowTimer(false);
+      }
+    };
+
+    updateTimer();
+    const timer = setInterval(updateTimer, 1000);
     return () => clearInterval(timer);
   }, []);
 
@@ -174,24 +181,26 @@ export default function PricingSection() {
               <div className="bg-gradient-to-r from-[#e52521] via-[#006cb7] to-[#e52521] py-3 px-4 shadow-lg">
                 <p className="font-black text-white text-center">
                   <span className="block text-[11px] md:text-[13px] uppercase tracking-[0.2em] opacity-90 mb-0.5">O MAIS COMPLETO DO MERCADO</span>
-                  <span className="block text-sm md:text-base uppercase tracking-tight">+450 MODELOS LEGO STL/3MF + 4 BÔNUS EXCLUSIVOS</span>
+                  <span className="block text-sm md:text-base uppercase tracking-tight">+500 MODELOS LEGO STL/3MF + 4 BÔNUS EXCLUSIVOS</span>
                 </p>
               </div>
 
-              {/* Timer Contagem Regressiva para o Fim do Dia */}
-              <div className="bg-black/90 border-y border-[#e52521]/40 py-2 px-3 flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-3 text-center shadow-inner">
-                <span className="text-[#e52521] font-black text-xs uppercase tracking-wider flex items-center gap-1.5">
-                  <span className="inline-block w-2 h-2 rounded-full bg-[#e52521] animate-ping" />
-                  OFERTA EXPIRA EM:
-                </span>
-                <div className="flex items-center gap-1 font-mono font-black text-white text-sm sm:text-base">
-                  <span className="bg-[#e52521] text-white px-2 py-0.5 rounded-none font-mono font-black shadow-md">{timeLeft.hours}h</span>
-                  <span className="text-[#e52521] font-black">:</span>
-                  <span className="bg-[#e52521] text-white px-2 py-0.5 rounded-none font-mono font-black shadow-md">{timeLeft.minutes}m</span>
-                  <span className="text-[#e52521] font-black">:</span>
-                  <span className="bg-[#e52521] text-white px-2 py-0.5 rounded-none font-mono font-black shadow-md">{timeLeft.seconds}s</span>
+              {/* Timer Contagem Regressiva para o Fim do Dia (Exibido apenas após as 19:00) */}
+              {showTimer && (
+                <div className="bg-black/90 border-y border-[#e52521]/40 py-2 px-3 flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-3 text-center shadow-inner">
+                  <span className="text-[#e52521] font-black text-xs uppercase tracking-wider flex items-center gap-1.5">
+                    <span className="inline-block w-2 h-2 rounded-full bg-[#e52521] animate-ping" />
+                    OFERTA EXPIRA EM:
+                  </span>
+                  <div className="flex items-center gap-1 font-mono font-black text-white text-sm sm:text-base">
+                    <span className="bg-[#e52521] text-white px-2 py-0.5 rounded-none font-mono font-black shadow-md">{timeLeft.hours}h</span>
+                    <span className="text-[#e52521] font-black">:</span>
+                    <span className="bg-[#e52521] text-white px-2 py-0.5 rounded-none font-mono font-black shadow-md">{timeLeft.minutes}m</span>
+                    <span className="text-[#e52521] font-black">:</span>
+                    <span className="bg-[#e52521] text-white px-2 py-0.5 rounded-none font-mono font-black shadow-md">{timeLeft.seconds}s</span>
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Imagem de Destaque das Cabeças Lego no Plano Full */}
               <div className="w-full pt-4 px-6 flex justify-center items-center">

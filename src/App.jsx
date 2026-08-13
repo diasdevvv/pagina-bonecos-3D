@@ -11,6 +11,7 @@ import PricingSection from './components/PricingSection';
 import GuaranteeFaq from './components/GuaranteeFaq';
 import Footer from './components/Footer';
 import StickyFloatingCTA from './components/StickyFloatingCTA';
+import SocialProofPopup from './components/SocialProofPopup';
 import { initMetaTracking } from './utils/metaPixel';
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
       <GuaranteeFaq />
       <Footer />
       <StickyFloatingCTA />
+      <SocialProofPopup />
     </div>
   );
 }
