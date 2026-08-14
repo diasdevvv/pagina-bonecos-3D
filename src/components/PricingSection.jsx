@@ -60,7 +60,7 @@ export default function PricingSection() {
         </div>
 
         <div className="w-full max-w-5xl mx-auto flex flex-col items-center justify-center gap-8 lg:flex-row lg:items-stretch">
-          {/* Plano Básico - R$ 17,90 */}
+          {/* Plano Básico - R$ 11,90 */}
           <div className="w-full max-w-md mx-auto bg-[#0F0F14]/90 backdrop-blur-md border-2 border-white/20 rounded-none overflow-hidden relative shadow-xl flex flex-col justify-between">
             <div>
               <div className="py-6 text-center bg-black/50 border-b border-white/10">
@@ -85,7 +85,7 @@ export default function PricingSection() {
               <div className="p-6 md:p-8 flex flex-col items-center text-center">
                 <div className="flex items-baseline justify-center gap-1 mb-2">
                   <span className="text-white/50 text-base font-bold">R$</span>
-                  <span className="text-white font-display font-black text-5xl md:text-6xl">17</span>
+                  <span className="text-white font-display font-black text-5xl md:text-6xl">11</span>
                   <span className="text-white/70 text-lg font-bold">,90</span>
                 </div>
                 <p className="text-white/60 text-xs uppercase tracking-widest font-semibold mb-6">Pagamento Único</p>
@@ -103,7 +103,7 @@ export default function PricingSection() {
             <div className="p-6 md:p-8 pt-0 flex flex-col items-center">
               <a
                 href="https://pay.wiapy.com/lY5XgbuCSOwG"
-                onClick={(e) => handleCheckoutClick(e, 'PACOTE BÁSICO', 17.90, 'https://pay.wiapy.com/lY5XgbuCSOwG')}
+                onClick={(e) => handleCheckoutClick(e, 'PACOTE BÁSICO', 11.90, 'https://pay.wiapy.com/lY5XgbuCSOwG')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full bg-[#006cb7] hover:bg-[#0055bf] text-white font-display font-black uppercase text-center text-sm py-4 px-6 rounded-none transition-colors shadow-lg cursor-pointer"
@@ -216,21 +216,27 @@ export default function PricingSection() {
               </div>
 
               <div className="p-6 md:p-8 flex flex-col items-center text-center">
-                <p className="text-2xl sm:text-3xl md:text-4xl text-[#e52521] font-black mb-1 italic drop-shadow-md">
-                  De R$ <span className="line-through decoration-4">247,00</span>
-                </p>
-                <p className="text-white/70 text-xs sm:text-sm uppercase tracking-widest font-bold mb-1">Por apenas</p>
-                <div className="flex items-baseline justify-center gap-1 my-1">
-                  <span className="text-[#e52521] text-lg font-bold">R$</span>
-                  <span className="text-white font-display font-black text-6xl md:text-7xl drop-shadow-md">37</span>
-                  <span className="text-white/80 text-xl font-bold">,90</span>
+                <div className="flex items-center justify-center gap-2 mb-1">
+                  <span className="text-white/50 line-through text-base sm:text-lg font-bold">De R$ 247,00</span>
+                  <span className="bg-[#e52521] text-white font-black text-[11px] sm:text-xs uppercase px-2.5 py-0.5 shadow-md tracking-wider">
+                    85% OFF
+                  </span>
                 </div>
-                <p className="text-[#006cb7] text-xs uppercase tracking-widest font-black mb-6">Acesso Imediato e Vitalício</p>
+                <p className="text-white/80 text-xs sm:text-sm uppercase tracking-widest font-bold mb-1">Por apenas</p>
+                <div className="flex items-baseline justify-center gap-1.5 my-1">
+                  <span className="text-yellow-400 font-bold text-2xl md:text-3xl">R$</span>
+                  <span className="text-yellow-400 font-display font-black text-6xl sm:text-7xl md:text-8xl drop-shadow-[0_0_25px_rgba(250,204,21,0.45)] leading-none">37</span>
+                  <span className="text-yellow-400 font-bold text-2xl md:text-3xl">,90</span>
+                </div>
+                <p className="text-[#00e676] text-xs uppercase tracking-widest font-black mt-2 mb-6 flex items-center justify-center gap-1.5">
+                  <span className="inline-block w-2 h-2 rounded-full bg-[#00e676] animate-pulse"></span>
+                  Acesso Imediato e Vitalício
+                </p>
 
                 <ul className="w-full text-left flex flex-col gap-3 text-sm text-white/90 font-medium border-t border-white/10 pt-6 mb-6">
                   <li className="flex items-center gap-3">
                     <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
-                    <span className="leading-tight font-bold text-white">+450 Modelos LEGO STL/3MF</span>
+                    <span className="leading-tight font-bold text-white">+500 Modelos LEGO STL/3MF</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
@@ -242,7 +248,27 @@ export default function PricingSection() {
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
-                    <span className="leading-tight text-white font-semibold">Coleção Super Heróis, Anime & Star Wars</span>
+                    <span className="leading-tight text-white font-semibold">Coleção Animes</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
+                    <span className="leading-tight text-white font-semibold">Coleção Star Wars</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
+                    <span className="leading-tight text-white font-semibold">Coleção DC/MARVEL</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
+                    <span className="leading-tight text-white font-semibold">Coleção Harry Potter</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
+                    <span className="leading-tight text-white font-semibold">Coleção Stranger Things</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
+                    <span className="leading-tight text-white font-semibold">Coleção Datas Comemorativas</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>

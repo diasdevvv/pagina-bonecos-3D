@@ -179,7 +179,7 @@ export default function Hero() {
               <div className="flex items-baseline justify-center gap-1.5 my-1">
                 <span className="text-white/60 text-base sm:text-lg font-bold">Por apenas</span>
                 <span className="text-yellow-400 font-display font-black text-4xl sm:text-5xl md:text-6xl drop-shadow-lg">
-                  R$ 17,90
+                  R$ 11,90
                 </span>
               </div>
 
