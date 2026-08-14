@@ -170,7 +170,7 @@ export default function Hero() {
             {/* Quadrado Principal de Preço */}
             <div className="bg-black/90 border-2 border-white/20 p-4 sm:p-6 w-full backdrop-blur-md flex flex-col items-center justify-center rounded-none text-center">
               <div className="flex items-center justify-center gap-3 mb-2 pt-2">
-                <span className="text-white/50 line-through text-base sm:text-lg font-bold">De R$ 247,00</span>
+                <span className="text-white/50 line-through text-base sm:text-lg font-bold">De R$ 97,00</span>
                 <span className="bg-[#e52521] text-white font-black text-xs sm:text-sm uppercase px-3 py-1 rounded-none shadow-md tracking-wider">
                   85% OFF HOJE
                 </span>
@@ -179,7 +179,7 @@ export default function Hero() {
               <div className="flex items-baseline justify-center gap-1.5 my-1">
                 <span className="text-white/60 text-base sm:text-lg font-bold">Por apenas</span>
                 <span className="text-yellow-400 font-display font-black text-4xl sm:text-5xl md:text-6xl drop-shadow-lg">
-                  R$ 17,90
+                  R$ 9,90
                 </span>
               </div>
 

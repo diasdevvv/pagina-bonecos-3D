@@ -84,7 +84,7 @@ export function trackViewContent() {
       {
         content_name: 'Mundo dos Modelos 3D Estilo LEGO',
         content_category: 'Modelos STL 3D',
-        value: 37.90,
+        value: 27.90,
         currency: 'BRL'
       },
       { eventID: eventId }

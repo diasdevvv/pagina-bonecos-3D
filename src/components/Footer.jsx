@@ -9,7 +9,7 @@ export default function Footer() {
           BLOCK 3D STL™
         </h2>
         <p className="mb-10 max-w-xl mx-auto opacity-80 leading-relaxed text-[13px] text-white/70">
-          A maior e mais premium biblioteca de arquivos STL para impressão 3D em formato de bloco Lego do mercado.
+          A maior e mais premium biblioteca de arquivos STL/3MF para impressão 3D em formato de bloco Lego do mercado.
         </p>
 
         {/* Security & Support (Trust Badges do Crocheverse - em modo Dark) */}

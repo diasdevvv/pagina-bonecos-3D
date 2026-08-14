@@ -76,7 +76,7 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
         </div>
 
         <div className="w-full max-w-5xl mx-auto flex flex-col items-center justify-center gap-8 lg:flex-row lg:items-stretch">
-          {/* Plano Básico - R$ 17,90 */}
+          {/* Plano Básico - R$ 9,90 */}
           <div className="w-full max-w-md mx-auto bg-[#0F0F14]/90 backdrop-blur-md border-2 border-white/20 rounded-none overflow-hidden relative shadow-xl flex flex-col justify-between">
             <div>
               <div className="py-6 text-center bg-black/50 border-b border-white/10">
@@ -101,7 +101,7 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
               <div className="p-6 md:p-8 flex flex-col items-center text-center">
                 <div className="flex items-baseline justify-center gap-1 mb-2">
                   <span className="text-white/50 text-base font-bold">R$</span>
-                  <span className="text-white font-display font-black text-5xl md:text-6xl">17</span>
+                  <span className="text-white font-display font-black text-5xl md:text-6xl">9</span>
                   <span className="text-white/70 text-lg font-bold">,90</span>
                 </div>
                 <p className="text-white/60 text-xs uppercase tracking-widest font-semibold mb-6">Pagamento Único</p>
@@ -143,7 +143,7 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
             </div>
           </div>
 
-          {/* Plano Completo - R$ 47,90 (ACESSO 3D PRO) */}
+          {/* Plano Completo - R$ 27,90 (ACESSO 3D PRO) */}
           <div className="w-full max-w-md mx-auto bg-[#0F0F14]/90 backdrop-blur-md border-2 border-[#e52521] rounded-none overflow-hidden relative shadow-2xl flex flex-col justify-between transform lg:-translate-y-4">
             {/* Personagens Espiando nas Laterais do Card ACESSO 3D PRO */}
             {/* Piloto F1 espiando no canto esquerdo */}
@@ -238,7 +238,7 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
                 <p className="text-white/80 text-xs sm:text-sm uppercase tracking-widest font-bold mb-1">Por apenas</p>
                 <div className="flex items-baseline justify-center gap-1.5 my-1">
                   <span className="text-yellow-400 font-bold text-2xl md:text-3xl">R$</span>
-                  <span className="text-yellow-400 font-display font-black text-6xl sm:text-7xl md:text-8xl drop-shadow-[0_0_25px_rgba(250,204,21,0.45)] leading-none">47</span>
+                  <span className="text-yellow-400 font-display font-black text-6xl sm:text-7xl md:text-8xl drop-shadow-[0_0_25px_rgba(250,204,21,0.45)] leading-none">27</span>
                   <span className="text-yellow-400 font-bold text-2xl md:text-3xl">,90</span>
                 </div>
                 <p className="text-[#00e676] text-xs uppercase tracking-widest font-black mt-2 mb-6 flex items-center justify-center gap-1.5">
@@ -330,16 +330,16 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
                     <span className="leading-tight text-white font-bold">Bônus 2: Pack Acessórios Lego</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <img src="/assets/images/bonus_construcao.webp" alt="Bônus 4" className="w-7 h-7 object-contain rounded-none shrink-0" loading="lazy" decoding="async" />
+                    <img src="/assets/images/bonus_construcao.webp" alt="Bônus 3" className="w-7 h-7 object-contain rounded-none shrink-0" loading="lazy" decoding="async" />
                     <span className="leading-tight text-white font-bold">Bônus 3: Pack Construção</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <img src="/assets/images/bonus2.webp" alt="Bônus 3" className="w-7 h-7 object-contain rounded-none shrink-0" loading="lazy" decoding="async" />
+                    <img src="/assets/images/bonus2.webp" alt="Bônus 4" className="w-7 h-7 object-contain rounded-none shrink-0" loading="lazy" decoding="async" />
                     <span className="leading-tight text-white font-bold">Bônus 4: +100 Chaveiros Lego</span>
                   </li>
 
                   <li className="flex items-center gap-3">
-                    <img src="/assets/images/bonus4.webp" alt="Bônus 5" className="w-7 h-7 object-cover rounded-none shrink-0" loading="lazy" decoding="async" />
+                    <img src="/assets/images/bonus4.webp" alt="Bônus 5" className="w-7 h-7 object-cover rounded-none border border-white/20 shrink-0" loading="lazy" decoding="async" />
                     <span className="leading-tight text-yellow-400 font-black uppercase">Bônus 5: Bônus Secreto Exclusivo</span>
                   </li>
                 </ul>
@@ -349,7 +349,7 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
             <div className="p-6 md:p-8 pt-0 flex flex-col items-center">
               <a
                 href="https://pay.wiapy.com/vhnff1UKkDp-"
-                onClick={(e) => handleCheckoutClick(e, 'ACESSO 3D PRO', 47.90, 'https://pay.wiapy.com/vhnff1UKkDp-')}
+                onClick={(e) => handleCheckoutClick(e, 'ACESSO 3D PRO', 27.90, 'https://pay.wiapy.com/vhnff1UKkDp-')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full bg-[#e52521] hover:bg-[#c81916] text-white font-display font-black uppercase text-center text-base md:text-lg py-4 px-6 rounded-none transition-colors shadow-2xl border-2 border-white/20 cursor-pointer"
@@ -372,7 +372,7 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
         </div>
       </div>
 
-      {/* POP UP UPSELL - OFERTA DO PLANO PRO POR R$ 37,90 AO CLICAR NO BÁSICO */}
+      {/* POP UP UPSELL - OFERTA DO PLANO PRO POR R$ 17,90 AO CLICAR NO BÁSICO */}
       <AnimatePresence>
         {isUpsellOpen && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
@@ -411,11 +411,11 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
 
               {/* Título Principal */}
               <h3 className="text-white font-display font-black text-xl sm:text-2xl uppercase tracking-tight leading-tight mb-2">
-                Leve o <span className="text-[#e52521]">ACESSO 3D PRO</span> por Apenas <span className="text-yellow-400">R$ 37,90</span>
+                Leve o <span className="text-[#e52521]">ACESSO 3D PRO</span> por Apenas <span className="text-yellow-400">R$ 17,90</span>
               </h3>
 
               <p className="text-white/80 text-xs sm:text-sm mb-4 leading-relaxed max-w-md mx-auto">
-                Por apenas <strong>mais R$ 20,00</strong>, desbloqueie a coleção completa com todos os +500 modelos, novas coleções todo mês e todos os 5 super bônus!
+                Por apenas <strong>mais R$ 8,00</strong>, desbloqueie a coleção completa com todos os +500 modelos, novas coleções todo mês e todos os 5 super bônus!
               </p>
 
               {/* Mini Lista de Vantagens */}
@@ -436,10 +436,10 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
 
               {/* Preço Promocional no Pop Up */}
               <div className="flex items-baseline justify-center gap-2 mb-4">
-                <span className="text-white/50 line-through text-sm font-bold">De R$ 47,90</span>
+                <span className="text-white/50 line-through text-sm font-bold">De R$ 27,90</span>
                 <span className="text-white/80 text-xs uppercase font-bold">por apenas</span>
                 <span className="text-yellow-400 font-display font-black text-2xl sm:text-3xl drop-shadow-md">
-                  R$ 37,90
+                  R$ 17,90
                 </span>
                 <span className="text-white/60 text-xs font-semibold">(Pagamento Único)</span>
               </div>
@@ -448,24 +448,24 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
               <button
                 type="button"
                 onClick={(e) => {
-                  handleCheckoutClick(e, 'UPGRADE ACESSO 3D PRO (MODAL)', 37.90, 'https://pay.wiapy.com/k9BgShQLjkp6');
+                  handleCheckoutClick(e, 'UPGRADE ACESSO 3D PRO (MODAL)', 17.90, 'https://pay.wiapy.com/k9BgShQLjkp6');
                   setIsUpsellOpen(false);
                 }}
                 className="w-full bg-[#e52521] hover:bg-[#c81916] text-white font-display font-black uppercase text-sm sm:text-base py-3.5 px-4 rounded-none transition-all shadow-xl border-2 border-white/20 transform active:scale-98 cursor-pointer mb-3 flex items-center justify-center gap-2"
               >
-                <span>SIM! QUERO APROVEITAR POR R$ 37,90</span>
+                <span>SIM! QUERO APROVEITAR POR R$ 17,90</span>
               </button>
 
               {/* Botão Secundário (Seguir com o Pacote Básico) */}
               <button
                 type="button"
                 onClick={(e) => {
-                  handleCheckoutClick(e, 'PACOTE BÁSICO', 17.90, 'https://pay.wiapy.com/lY5XgbuCSOwG');
+                  handleCheckoutClick(e, 'PACOTE BÁSICO', 9.90, 'https://pay.wiapy.com/lY5XgbuCSOwG');
                   setIsUpsellOpen(false);
                 }}
                 className="text-white/60 hover:text-white text-xs sm:text-sm font-medium underline underline-offset-4 transition-colors cursor-pointer py-1 block w-full"
               >
-                Não, obrigado. Quero apenas o Pacote Básico por R$ 17,90
+                Não, obrigado. Quero apenas o Pacote Básico por R$ 9,90
               </button>
             </motion.div>
           </div>

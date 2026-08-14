@@ -5,7 +5,6 @@ import BrandMarquee from './components/BrandMarquee';
 import VisualShowcase from './components/VisualShowcase';
 import SportsPack from './components/SportsPack';
 import ModelCarousel from './components/ModelCarousel';
-import VideoShowcase from './components/VideoShowcase';
 import ResultsSection from './components/ResultsSection';
 import BonusSection from './components/BonusSection';
 import PricingSection from './components/PricingSection';
@@ -30,7 +29,6 @@ export default function App() {
       <VisualShowcase />
       <SportsPack />
       <ModelCarousel />
-      <VideoShowcase />
       <ResultsSection />
       <BonusSection />
       <PricingSection isUpsellOpen={isUpsellOpen} setIsUpsellOpen={setIsUpsellOpen} />
