@@ -116,7 +116,7 @@ export default function ResultsSection() {
 
         {/* Subtexto Centralizado Abaixo das Imagens */}
         <p className="text-white/80 font-medium text-base sm:text-lg max-w-2xl text-center mx-auto mt-8 sm:mt-12 leading-relaxed drop-shadow-md relative z-20">
-          Quem usa o Pack sabe o sentimento de finalizar uma impressão de qualidade
+          Quem adquiriu sabe o sentimento de finalizar uma impressão de qualidade!
         </p>
       </div>
     </section>

@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import HeaderBar from './components/HeaderBar';
 import Hero from './components/Hero';
 import BrandMarquee from './components/BrandMarquee';
 import VisualShowcase from './components/VisualShowcase';
 import SportsPack from './components/SportsPack';
 import ModelCarousel from './components/ModelCarousel';
+import VideoShowcase from './components/VideoShowcase';
 import ResultsSection from './components/ResultsSection';
 import BonusSection from './components/BonusSection';
 import PricingSection from './components/PricingSection';
@@ -15,6 +16,8 @@ import SocialProofPopup from './components/SocialProofPopup';
 import { initMetaTracking } from './utils/metaPixel';
 
 export default function App() {
+  const [isUpsellOpen, setIsUpsellOpen] = useState(false);
+
   useEffect(() => {
     initMetaTracking();
   }, []);
@@ -27,12 +30,13 @@ export default function App() {
       <VisualShowcase />
       <SportsPack />
       <ModelCarousel />
+      <VideoShowcase />
       <ResultsSection />
       <BonusSection />
-      <PricingSection />
+      <PricingSection isUpsellOpen={isUpsellOpen} setIsUpsellOpen={setIsUpsellOpen} />
       <GuaranteeFaq />
       <Footer />
-      <StickyFloatingCTA />
+      <StickyFloatingCTA isUpsellOpen={isUpsellOpen} />
       <SocialProofPopup />
     </div>
   );

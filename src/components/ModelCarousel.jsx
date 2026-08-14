@@ -31,9 +31,20 @@ export default function ModelCarousel() {
           </motion.span>
 
           {/* Título Principal */}
-          <h2 className="font-display font-black text-3xl sm:text-5xl md:text-6xl tracking-tight text-white mb-4 uppercase drop-shadow-2xl text-right">
+          <h2 className="font-display font-black text-3xl sm:text-5xl md:text-6xl tracking-tight text-white mb-2 uppercase drop-shadow-2xl text-right">
             UMA SURRA DE <br /><span className="text-[#249831]">QUALIDADE</span>
           </h2>
+
+          {/* Subtítulo */}
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-white/80 font-medium text-sm sm:text-base md:text-lg text-right max-w-xl"
+          >
+            Aqui você vai aprender Imprimir <br />Vender, e Lucrar com LEGO 3D!<br />
+          </motion.p>
         </div>
       </div>
 

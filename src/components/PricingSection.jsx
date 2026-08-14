@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { trackInitiateCheckout } from '../utils/metaPixel';
 
-export default function PricingSection() {
+export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, setIsUpsellOpen: controlledSetUpsellOpen }) {
   const [showTimer, setShowTimer] = useState(false);
   const [timeLeft, setTimeLeft] = useState({ hours: '00', minutes: '00', seconds: '00' });
-  const [isUpsellOpen, setIsUpsellOpen] = useState(false);
+  const [internalUpsellOpen, setInternalUpsellOpen] = useState(false);
+
+  const isUpsellOpen = controlledUpsellOpen !== undefined ? controlledUpsellOpen : internalUpsellOpen;
+  const setIsUpsellOpen = controlledSetUpsellOpen || setInternalUpsellOpen;
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -191,7 +194,7 @@ export default function PricingSection() {
               <div className="bg-gradient-to-r from-[#e52521] via-[#006cb7] to-[#e52521] py-3 px-4 shadow-lg">
                 <p className="font-black text-white text-center">
                   <span className="block text-[11px] md:text-[13px] uppercase tracking-[0.2em] opacity-90 mb-0.5">O MAIS COMPLETO DO MERCADO</span>
-                  <span className="block text-sm md:text-base uppercase tracking-tight">+500 MODELOS LEGO STL/3MF + 4 BÔNUS EXCLUSIVOS</span>
+                  <span className="block text-sm md:text-base uppercase tracking-tight">+500 MODELOS LEGO STL/3MF + TODAS COLEÇÕES + BÔNUS</span>
                 </p>
               </div>
 
@@ -317,22 +320,27 @@ export default function PricingSection() {
 
                   <li className="w-full h-px bg-white/10 my-1" />
 
-                  {/* OS 4 BÔNUS ESPECÍFICOS COM IMAGEM PEQUENA AO LADO DO TÍTULO */}
+                  {/* OS 5 BÔNUS ESPECÍFICOS COM IMAGEM PEQUENA AO LADO DO TÍTULO */}
                   <li className="flex items-center gap-3">
                     <img src="/assets/images/bonus1.webp" alt="Bônus 1" className="w-7 h-7 object-contain rounded-none shrink-0" loading="lazy" decoding="async" />
                     <span className="leading-tight text-white font-bold">Bônus 1: CURSO DE IMPRESSÃO E FILAMENTO LEGO</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <img src="/assets/images/bonus5.webp" alt="Bônus 2" className="w-7 h-7 object-contain rounded-none shrink-0" loading="lazy" decoding="async" />
-                    <span className="leading-tight text-white font-bold">Bônus 2: Coleção Construção</span>
+                    <span className="leading-tight text-white font-bold">Bônus 2: Pack Acessórios Lego</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <img src="/assets/images/bonus_construcao.webp" alt="Bônus 4" className="w-7 h-7 object-contain rounded-none shrink-0" loading="lazy" decoding="async" />
+                    <span className="leading-tight text-white font-bold">Bônus 3: Pack Construção</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <img src="/assets/images/bonus2.webp" alt="Bônus 3" className="w-7 h-7 object-contain rounded-none shrink-0" loading="lazy" decoding="async" />
-                    <span className="leading-tight text-white font-bold">Bônus 3: +100 Chaveiros 3D</span>
+                    <span className="leading-tight text-white font-bold">Bônus 4: +100 Chaveiros Lego</span>
                   </li>
+
                   <li className="flex items-center gap-3">
-                    <img src="/assets/images/bonus4.webp" alt="Bônus 4" className="w-7 h-7 object-cover rounded-none border border-white/20 shrink-0" loading="lazy" decoding="async" />
-                    <span className="leading-tight text-yellow-400 font-black uppercase">Bônus 4: Bônus Secreto Exclusivo</span>
+                    <img src="/assets/images/bonus4.webp" alt="Bônus 5" className="w-7 h-7 object-cover rounded-none shrink-0" loading="lazy" decoding="async" />
+                    <span className="leading-tight text-yellow-400 font-black uppercase">Bônus 5: Bônus Secreto Exclusivo</span>
                   </li>
                 </ul>
               </div>
@@ -407,7 +415,7 @@ export default function PricingSection() {
               </h3>
 
               <p className="text-white/80 text-xs sm:text-sm mb-4 leading-relaxed max-w-md mx-auto">
-                Por apenas <strong>mais R$ 20,00</strong>, desbloqueie a coleção completa com todos os +500 modelos, novas coleções todo mês e todos os 4 super bônus!
+                Por apenas <strong>mais R$ 20,00</strong>, desbloqueie a coleção completa com todos os +500 modelos, novas coleções todo mês e todos os 5 super bônus!
               </p>
 
               {/* Mini Lista de Vantagens */}
@@ -422,7 +430,7 @@ export default function PricingSection() {
                 </div>
                 <div className="flex items-center gap-2 text-white font-semibold">
                   <span className="text-[#00e676] font-bold text-sm">✓</span>
-                  <span className="text-yellow-400 font-bold">Atualizações Mensais + Todos os 4 Bônus Exclusivos</span>
+                  <span className="text-yellow-400 font-bold">Atualizações Mensais + Todos os 5 Bônus Exclusivos</span>
                 </div>
               </div>
 
