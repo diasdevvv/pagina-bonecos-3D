@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 max-w-5xl">
         {/* Brand */}
         <h2 className="text-[#006cb7] font-display font-black text-2xl md:text-3xl uppercase tracking-widest mb-3 inline-block drop-shadow-md">
-          BLOCK 3D™
+          BLOCK 3D STL™
         </h2>
         <p className="mb-10 max-w-xl mx-auto opacity-80 leading-relaxed text-[13px] text-white/70">
           A maior e mais premium biblioteca de arquivos STL para impressão 3D em formato de bloco Lego do mercado.

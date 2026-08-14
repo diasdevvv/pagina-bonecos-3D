@@ -1,10 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { trackInitiateCheckout } from '../utils/metaPixel';
 
 export default function PricingSection() {
   const [showTimer, setShowTimer] = useState(false);
   const [timeLeft, setTimeLeft] = useState({ hours: '00', minutes: '00', seconds: '00' });
+  const [isUpsellOpen, setIsUpsellOpen] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setIsUpsellOpen(false);
+      }
+    };
+    if (isUpsellOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isUpsellOpen]);
 
   useEffect(() => {
     const updateTimer = () => {
@@ -60,7 +73,7 @@ export default function PricingSection() {
         </div>
 
         <div className="w-full max-w-5xl mx-auto flex flex-col items-center justify-center gap-8 lg:flex-row lg:items-stretch">
-          {/* Plano Básico - R$ 11,90 */}
+          {/* Plano Básico - R$ 17,90 */}
           <div className="w-full max-w-md mx-auto bg-[#0F0F14]/90 backdrop-blur-md border-2 border-white/20 rounded-none overflow-hidden relative shadow-xl flex flex-col justify-between">
             <div>
               <div className="py-6 text-center bg-black/50 border-b border-white/10">
@@ -85,31 +98,28 @@ export default function PricingSection() {
               <div className="p-6 md:p-8 flex flex-col items-center text-center">
                 <div className="flex items-baseline justify-center gap-1 mb-2">
                   <span className="text-white/50 text-base font-bold">R$</span>
-                  <span className="text-white font-display font-black text-5xl md:text-6xl">11</span>
+                  <span className="text-white font-display font-black text-5xl md:text-6xl">17</span>
                   <span className="text-white/70 text-lg font-bold">,90</span>
                 </div>
                 <p className="text-white/60 text-xs uppercase tracking-widest font-semibold mb-6">Pagamento Único</p>
 
                 <ul className="w-full text-left flex flex-col gap-3.5 text-sm text-white/80 font-medium border-t border-white/10 pt-5 mb-6">
-                  <li className="flex items-center gap-3"><span className="text-[#006cb7] font-bold">✓</span> <strong className="text-white">50 Modelos</strong></li>
+                  <li className="flex items-center gap-3"><span className="text-[#006cb7] font-bold">✓</span> <strong className="text-white">80 Modelos</strong></li>
                   <li className="flex items-center gap-3"><span className="text-[#006cb7] font-bold">✓</span> Arquivos STL Limpos</li>
                   <li className="flex items-center gap-3"><span className="text-white/40 font-bold">✕</span> <span className="text-white/50">Sem bônus</span></li>
-                  <li className="flex items-center gap-3"><span className="text-white/40 font-bold">✕</span> <span className="text-white/50">Sem Licença Comercial</span></li>
                   <li className="flex items-center gap-3"><span className="text-white/40 font-bold">✕</span> <span className="text-white/50">Sem Atualizações</span></li>
                 </ul>
               </div>
             </div>
 
             <div className="p-6 md:p-8 pt-0 flex flex-col items-center">
-              <a
-                href="https://pay.wiapy.com/lY5XgbuCSOwG"
-                onClick={(e) => handleCheckoutClick(e, 'PACOTE BÁSICO', 11.90, 'https://pay.wiapy.com/lY5XgbuCSOwG')}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => setIsUpsellOpen(true)}
                 className="block w-full bg-[#006cb7] hover:bg-[#0055bf] text-white font-display font-black uppercase text-center text-sm py-4 px-6 rounded-none transition-colors shadow-lg cursor-pointer"
               >
                 QUERO O PACOTE BÁSICO
-              </a>
+              </button>
 
               {/* Aviso Exato da Imagem de Referência abaixo do Botão */}
               <div className="mt-5 pt-4 w-full border-t border-white/10 flex flex-col items-center justify-center text-center">
@@ -130,7 +140,7 @@ export default function PricingSection() {
             </div>
           </div>
 
-          {/* Plano Completo - R$ 37,90 (ACESSO 3D PRO) */}
+          {/* Plano Completo - R$ 47,90 (ACESSO 3D PRO) */}
           <div className="w-full max-w-md mx-auto bg-[#0F0F14]/90 backdrop-blur-md border-2 border-[#e52521] rounded-none overflow-hidden relative shadow-2xl flex flex-col justify-between transform lg:-translate-y-4">
             {/* Personagens Espiando nas Laterais do Card ACESSO 3D PRO */}
             {/* Piloto F1 espiando no canto esquerdo */}
@@ -225,7 +235,7 @@ export default function PricingSection() {
                 <p className="text-white/80 text-xs sm:text-sm uppercase tracking-widest font-bold mb-1">Por apenas</p>
                 <div className="flex items-baseline justify-center gap-1.5 my-1">
                   <span className="text-yellow-400 font-bold text-2xl md:text-3xl">R$</span>
-                  <span className="text-yellow-400 font-display font-black text-6xl sm:text-7xl md:text-8xl drop-shadow-[0_0_25px_rgba(250,204,21,0.45)] leading-none">37</span>
+                  <span className="text-yellow-400 font-display font-black text-6xl sm:text-7xl md:text-8xl drop-shadow-[0_0_25px_rgba(250,204,21,0.45)] leading-none">47</span>
                   <span className="text-yellow-400 font-bold text-2xl md:text-3xl">,90</span>
                 </div>
                 <p className="text-[#00e676] text-xs uppercase tracking-widest font-black mt-2 mb-6 flex items-center justify-center gap-1.5">
@@ -240,11 +250,21 @@ export default function PricingSection() {
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
-                    <span className="leading-tight text-white font-semibold">Coleção F1 Corrida</span>
+                    <span className="leading-tight text-white font-semibold flex items-center gap-2">
+                      Coleção F1 Corrida
+                      <span className="bg-[#e52521] text-white text-[10px] font-black uppercase px-1.5 py-0.5 rounded-none tracking-wider shadow-sm">
+                        NOVO
+                      </span>
+                    </span>
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
-                    <span className="leading-tight text-white font-semibold">Coleção Copa do Mundo 2026 + Taça</span>
+                    <span className="leading-tight text-white font-semibold flex items-center gap-2">
+                      Coleção Copa 2026 + Taça
+                      <span className="bg-[#e52521] text-white text-[10px] font-black uppercase px-1.5 py-0.5 rounded-none tracking-wider shadow-sm">
+                        NOVO
+                      </span>
+                    </span>
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
@@ -321,7 +341,7 @@ export default function PricingSection() {
             <div className="p-6 md:p-8 pt-0 flex flex-col items-center">
               <a
                 href="https://pay.wiapy.com/vhnff1UKkDp-"
-                onClick={(e) => handleCheckoutClick(e, 'ACESSO 3D PRO', 37.90, 'https://pay.wiapy.com/vhnff1UKkDp-')}
+                onClick={(e) => handleCheckoutClick(e, 'ACESSO 3D PRO', 47.90, 'https://pay.wiapy.com/vhnff1UKkDp-')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full bg-[#e52521] hover:bg-[#c81916] text-white font-display font-black uppercase text-center text-base md:text-lg py-4 px-6 rounded-none transition-colors shadow-2xl border-2 border-white/20 cursor-pointer"
@@ -343,6 +363,106 @@ export default function PricingSection() {
           </div>
         </div>
       </div>
+
+      {/* POP UP UPSELL - OFERTA DO PLANO PRO POR R$ 37,90 AO CLICAR NO BÁSICO */}
+      <AnimatePresence>
+        {isUpsellOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+            {/* Backdrop com desfoque */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsUpsellOpen(false)}
+              className="fixed inset-0 bg-black/85 backdrop-blur-md"
+            />
+
+            {/* Caixa do Pop Up */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.92, y: 20 }}
+              transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              className="relative w-full max-w-lg bg-[#0F0F14] border-2 border-[#e52521] shadow-[0_0_50px_rgba(229,37,33,0.35)] rounded-none z-10 overflow-hidden text-center my-auto p-5 sm:p-7"
+            >
+              {/* Botão Fechar (X) */}
+              <button
+                onClick={() => setIsUpsellOpen(false)}
+                className="absolute top-3 right-3 text-white/50 hover:text-white transition-colors p-1 cursor-pointer"
+                aria-label="Fechar"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              {/* Tag / Badge Topo */}
+              <div className="inline-flex items-center gap-1.5 bg-[#e52521] text-white font-black text-[10px] sm:text-xs uppercase px-3 py-1 mb-3 shadow-md tracking-widest">
+                <span>⚠️ ESPERE! OFERTA EXCLUSIVA</span>
+              </div>
+
+              {/* Título Principal */}
+              <h3 className="text-white font-display font-black text-xl sm:text-2xl uppercase tracking-tight leading-tight mb-2">
+                Leve o <span className="text-[#e52521]">ACESSO 3D PRO</span> por Apenas <span className="text-yellow-400">R$ 37,90</span>
+              </h3>
+
+              <p className="text-white/80 text-xs sm:text-sm mb-4 leading-relaxed max-w-md mx-auto">
+                Por apenas <strong>mais R$ 20,00</strong>, desbloqueie a coleção completa com todos os +500 modelos, novas coleções todo mês e todos os 4 super bônus!
+              </p>
+
+              {/* Mini Lista de Vantagens */}
+              <div className="bg-black/70 border border-white/10 p-3.5 sm:p-4 mb-4 text-left text-xs sm:text-sm space-y-2">
+                <div className="flex items-center gap-2 text-white font-semibold">
+                  <span className="text-[#00e676] font-bold text-sm">✓</span>
+                  <span><strong>+500 Modelos LEGO STL/3MF</strong> (vs apenas 50 do básico)</span>
+                </div>
+                <div className="flex items-center gap-2 text-white font-semibold">
+                  <span className="text-[#00e676] font-bold text-sm">✓</span>
+                  <span><strong>Coleções F1, Copa 2026, Marvel, Animes</strong> e muito mais</span>
+                </div>
+                <div className="flex items-center gap-2 text-white font-semibold">
+                  <span className="text-[#00e676] font-bold text-sm">✓</span>
+                  <span className="text-yellow-400 font-bold">Atualizações Mensais + Todos os 4 Bônus Exclusivos</span>
+                </div>
+              </div>
+
+              {/* Preço Promocional no Pop Up */}
+              <div className="flex items-baseline justify-center gap-2 mb-4">
+                <span className="text-white/50 line-through text-sm font-bold">De R$ 47,90</span>
+                <span className="text-white/80 text-xs uppercase font-bold">por apenas</span>
+                <span className="text-yellow-400 font-display font-black text-2xl sm:text-3xl drop-shadow-md">
+                  R$ 37,90
+                </span>
+                <span className="text-white/60 text-xs font-semibold">(Pagamento Único)</span>
+              </div>
+
+              {/* Botão de Upgrade (Promoção) */}
+              <button
+                type="button"
+                onClick={(e) => {
+                  handleCheckoutClick(e, 'UPGRADE ACESSO 3D PRO (MODAL)', 37.90, 'https://pay.wiapy.com/k9BgShQLjkp6');
+                  setIsUpsellOpen(false);
+                }}
+                className="w-full bg-[#e52521] hover:bg-[#c81916] text-white font-display font-black uppercase text-sm sm:text-base py-3.5 px-4 rounded-none transition-all shadow-xl border-2 border-white/20 transform active:scale-98 cursor-pointer mb-3 flex items-center justify-center gap-2"
+              >
+                <span>SIM! QUERO APROVEITAR POR R$ 37,90</span>
+              </button>
+
+              {/* Botão Secundário (Seguir com o Pacote Básico) */}
+              <button
+                type="button"
+                onClick={(e) => {
+                  handleCheckoutClick(e, 'PACOTE BÁSICO', 17.90, 'https://pay.wiapy.com/lY5XgbuCSOwG');
+                  setIsUpsellOpen(false);
+                }}
+                className="text-white/60 hover:text-white text-xs sm:text-sm font-medium underline underline-offset-4 transition-colors cursor-pointer py-1 block w-full"
+              >
+                Não, obrigado. Quero apenas o Pacote Básico por R$ 17,90
+              </button>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
