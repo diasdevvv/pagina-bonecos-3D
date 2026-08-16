@@ -70,9 +70,8 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
           <h2 className="text-white font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight mb-4 text-center leading-tight">
             ESCOLHA A COLEÇÃO<br /><span className="text-[#e52521]">PERFEITA PARA VOCÊ</span>
           </h2>
-          <p className="text-white/80 font-medium text-lg text-center mx-auto">
-            Acesso imediato aos modelos STL 3D.<br />Pagamento único sem mensalidades.
-          </p>
+          Acesso vitalício ao ecossistema.<br />
+          Pagamento único.
         </div>
 
         <div className="w-full max-w-5xl mx-auto flex flex-col items-center justify-center gap-8 lg:flex-row lg:items-stretch">
@@ -361,7 +360,7 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
               <div className="w-full mt-4 flex justify-center items-center">
                 <img
                   src="/assets/images/payment_methods.webp"
-                  alt="Formas de Pagamento - PIX, Cartão de Crédito e Boleto"
+                  alt="Formas de Pagamento - Payt, PIX, Visa, Mastercard"
                   className="w-full max-w-[280px] h-auto object-contain opacity-90 brightness-110"
                   loading="lazy"
                   decoding="async"

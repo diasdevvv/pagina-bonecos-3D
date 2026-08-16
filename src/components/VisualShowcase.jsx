@@ -94,7 +94,7 @@ export default function VisualShowcase() {
             MAIS DE <span className="text-[#006cb7]">500 <br />MODELOS</span> DE PERSONAGENS <br /> PRONTOS
           </h2>
           <p className="text-white/90 text-sm md:text-lg font-medium max-w-xl leading-relaxed mb-4 drop-shadow-md">
-            Todos os personagens que seus clientes procuram, com encaixes perfeitos e prontos para impressão!
+            Todos os personagens que seus clientes procuram, com encaixes perfeitos e de diversos tamanhos!
           </p>
         </div>
       </motion.div>
