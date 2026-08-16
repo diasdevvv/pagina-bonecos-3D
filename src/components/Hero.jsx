@@ -96,7 +96,7 @@ export default function Hero() {
             className="w-full max-w-md sm:max-w-lg md:max-w-xl mx-auto flex justify-center items-center relative z-10 opacity-90 brightness-110 pointer-events-none"
           >
             <img
-              src="/assets/images/hero_main_mockup.png"
+              src="/assets/images/hero_main_mockup.webp"
               alt="Impressora 3D Bambu Lab imprimindo Venom Lego, Batman e Plataforma"
               width={600}
               height={600}
