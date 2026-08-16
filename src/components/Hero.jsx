@@ -13,20 +13,20 @@ export default function Hero() {
 
   return (
     <section className="relative w-full overflow-hidden bg-black pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-16 md:pb-24 border-b border-white/10 flex items-center justify-center">
-      {/* ==================== FUNDO DA IMAGEM FULL-BLEED ==================== */}
+      {/* ==================== FUNDO DA IMAGEM FULL-BLEED PRETO E BRANCO ==================== */}
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
         <img
           src="/assets/images/lego_bg_pattern.webp"
           alt="Os Maiores Ícones em Versão Lego 3D STL"
           width={1920}
           height={1080}
-          className="w-full h-full object-cover object-center brightness-105 contrast-105"
+          className="w-full h-full object-cover object-center grayscale brightness-50 contrast-110 opacity-100"
           fetchPriority="high"
           decoding="sync"
         />
 
         {/* Vinheta de Cima para Baixo para Destaque e Leitura Perfeita da Headline */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/30 to-black/80 z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-black/90 z-10 pointer-events-none" />
       </div>
 
       {/* ==================== PERSONAGENS ESPIANDO NAS LATERAIS DA TELA ==================== */}
@@ -75,11 +75,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="uppercase font-display font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[1.1] mb-[-15px] drop-shadow-2xl text-center max-w-4xl pt-0"
+          className="uppercase font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[1.22] mb-[-37px] drop-shadow-2xl text-center max-w-4xl pt-0"
         >
-          Uma Coleção Única <br />Estilo <span className="text-[#006cb7] ">LEGO </span>
+          <span className="text-[#006cb7]">+500</span> Modelos<br /><span>Estilo <span className="text-[#006cb7] ">LEGO </span></span><br />
 
-          Para<br />sua Impressora 3D
+          Para sua<br /><span> Impressora 3D</span>
           <br />
         </motion.h1>
         <br />
@@ -88,7 +88,7 @@ export default function Hero() {
         {/* 2. CONTAINER DA IMPRESSORA + PERSONAGENS + CAIXA DE PREÇO + SUBTÍTULO INTEGRADO */}
         <div className="relative w-full max-w-lg mx-auto flex flex-col items-center justify-center my-2 sm:my-4">
 
-          {/* IMPRESSORA 3D BAMBU LAB 100% CENTRALIZADA POR TRÁS DE TUDO (Z-10) */}
+          {/* IMPRESSORA 3D BAMBU LAB + BATMAN + NOTEBOOK 100% CENTRALIZADA POR TRÁS DE TUDO (Z-10) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -96,11 +96,11 @@ export default function Hero() {
             className="w-full max-w-md sm:max-w-lg md:max-w-xl mx-auto flex justify-center items-center relative z-10 opacity-90 brightness-110 pointer-events-none"
           >
             <img
-              src="/assets/images/hero_3d_printer_venom.webp"
-              alt="Impressora 3D Bambu Lab imprimindo Venom Lego"
+              src="/assets/images/hero_main_mockup.png"
+              alt="Impressora 3D Bambu Lab imprimindo Venom Lego, Batman e Plataforma"
               width={600}
               height={600}
-              className="w-full h-auto max-h-[280px] sm:max-h-[360px] md:max-h-[440px] object-contain mx-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.95)]"
+              className="w-full h-auto max-h-[300px] sm:max-h-[380px] md:max-h-[460px] mb-2 object-contain mx-auto drop-shadow-[0_15px_30px_rgba(0,0,0,0.95)]"
               loading="lazy"
               decoding="async"
             />

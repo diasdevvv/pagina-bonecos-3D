@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import BrandMarquee from './components/BrandMarquee';
 import VisualShowcase from './components/VisualShowcase';
 import SportsPack from './components/SportsPack';
+import MembersAreaSection from './components/MembersAreaSection';
 import ModelCarousel from './components/ModelCarousel';
 import ResultsSection from './components/ResultsSection';
 import BonusSection from './components/BonusSection';
@@ -28,6 +29,7 @@ export default function App() {
       <BrandMarquee />
       <VisualShowcase />
       <SportsPack />
+      <MembersAreaSection />
       <ModelCarousel />
       <ResultsSection />
       <BonusSection />
