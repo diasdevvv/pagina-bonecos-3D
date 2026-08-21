@@ -3,8 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { trackInitiateCheckout } from '../utils/metaPixel';
 
 export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, setIsUpsellOpen: controlledSetUpsellOpen }) {
-  const [showTimer, setShowTimer] = useState(false);
-  const [timeLeft, setTimeLeft] = useState({ hours: '00', minutes: '00', seconds: '00' });
   const [internalUpsellOpen, setInternalUpsellOpen] = useState(false);
 
   const isUpsellOpen = controlledUpsellOpen !== undefined ? controlledUpsellOpen : internalUpsellOpen;
@@ -22,32 +20,6 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isUpsellOpen]);
 
-  useEffect(() => {
-    const updateTimer = () => {
-      const now = new Date();
-      const currentHour = now.getHours();
-
-      // Exibe o timer apenas após as 19:00 (19h em diante)
-      if (currentHour >= 19) {
-        setShowTimer(true);
-
-        const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
-        const difference = Math.max(0, Math.floor((endOfDay - now) / 1000));
-
-        const hours = String(Math.floor(difference / 3600)).padStart(2, '0');
-        const minutes = String(Math.floor((difference % 3600) / 60)).padStart(2, '0');
-        const seconds = String(difference % 60).padStart(2, '0');
-
-        setTimeLeft({ hours, minutes, seconds });
-      } else {
-        setShowTimer(false);
-      }
-    };
-
-    updateTimer();
-    const timer = setInterval(updateTimer, 1000);
-    return () => clearInterval(timer);
-  }, []);
 
   const handleCheckoutClick = (e, planName, price, targetUrl) => {
     e.preventDefault();
@@ -197,22 +169,6 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
                 </p>
               </div>
 
-              {/* Timer Contagem Regressiva para o Fim do Dia (Exibido apenas após as 19:00) */}
-              {showTimer && (
-                <div className="bg-black/90 border-y border-[#e52521]/40 py-2 px-3 flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-3 text-center shadow-inner">
-                  <span className="text-[#e52521] font-black text-xs uppercase tracking-wider flex items-center gap-1.5">
-                    <span className="inline-block w-2 h-2 rounded-full bg-[#e52521] animate-ping" />
-                    OFERTA EXPIRA EM:
-                  </span>
-                  <div className="flex items-center gap-1 font-mono font-black text-white text-sm sm:text-base">
-                    <span className="bg-[#e52521] text-white px-2 py-0.5 rounded-none font-mono font-black shadow-md">{timeLeft.hours}h</span>
-                    <span className="text-[#e52521] font-black">:</span>
-                    <span className="bg-[#e52521] text-white px-2 py-0.5 rounded-none font-mono font-black shadow-md">{timeLeft.minutes}m</span>
-                    <span className="text-[#e52521] font-black">:</span>
-                    <span className="bg-[#e52521] text-white px-2 py-0.5 rounded-none font-mono font-black shadow-md">{timeLeft.seconds}s</span>
-                  </div>
-                </div>
-              )}
 
               {/* Imagem de Destaque das Cabeças Lego no Plano Full */}
               <div className="w-full pt-4 px-6 flex justify-center items-center">
