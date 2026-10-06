@@ -210,6 +210,20 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
                     <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
                     <span className="leading-tight text-white font-semibold flex items-center gap-2">
                       Coleção F1 Corrida
+
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
+                    <span className="leading-tight text-white font-semibold flex items-center gap-2">
+                      Coleção Copa 2026 + Taça
+
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
+                    <span className="leading-tight text-white font-semibold flex items-center gap-2">
+                      Coleção Especial Natal
                       <span className="bg-[#e52521] text-white text-[10px] font-black uppercase px-1.5 py-0.5 rounded-none tracking-wider shadow-sm">
                         NOVO
                       </span>
@@ -218,8 +232,8 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
                   <li className="flex items-center gap-3">
                     <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
                     <span className="leading-tight text-white font-semibold flex items-center gap-2">
-                      Coleção Copa 2026 + Taça
-                      <span className="bg-[#e52521] text-white text-[10px] font-black uppercase px-1.5 py-0.5 rounded-none tracking-wider shadow-sm">
+                      Coleção Halloween & Terror
+                      <span className="bg-[#ff6600] text-white text-[10px] font-black uppercase px-1.5 py-0.5 rounded-none tracking-wider shadow-sm">
                         NOVO
                       </span>
                     </span>

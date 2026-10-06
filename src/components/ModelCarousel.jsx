@@ -2,9 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function ModelCarousel() {
-  // 37 imagens otimizadas da pasta carrossel imagens
-  const row1 = Array.from({ length: 18 }, (_, i) => `carousel_${i + 1}.webp`);
-  const row2 = Array.from({ length: 19 }, (_, i) => `carousel_${i + 19}.webp`);
+  // 95 novas imagens otimizadas da pasta carousel (Image01.webp até Image95.webp)
+  const formatName = (num) => `Image${String(num).padStart(2, '0')}.webp`;
+
+  const row1 = Array.from({ length: 32 }, (_, i) => formatName(i + 1));
+  const row2 = Array.from({ length: 32 }, (_, i) => formatName(i + 33));
+  const row3 = Array.from({ length: 31 }, (_, i) => formatName(i + 65));
 
   return (
     <section className="pt-4 sm:pt-6 md:pt-8 pb-0 relative z-30 bg-black border-b border-white/10 overflow-visible">
@@ -55,7 +58,7 @@ export default function ModelCarousel() {
 
         {/* Carrossel 1 (Esquerda) - 100% encostado sem gaps */}
         <div className="marquee-container relative z-10 overflow-hidden">
-          <div className="marquee-track-left !gap-0 !py-0">
+          <div className="marquee-track-left !gap-0 !py-0" style={{ animationDuration: '32s' }}>
             {[...row1, ...row1].map((imgName, idx) => (
               <div
                 key={idx}
@@ -63,7 +66,7 @@ export default function ModelCarousel() {
               >
                 <img
                   src={`/assets/images/carousel/${imgName}`}
-                  alt={`Modelo 3D STL ${idx + 1}`}
+                  alt={`Modelo 3D STL ${imgName}`}
                   className="w-full aspect-[3/5] object-cover opacity-95 hover:opacity-100 transition-opacity block"
                   loading="lazy"
                   decoding="async"
@@ -75,7 +78,7 @@ export default function ModelCarousel() {
 
         {/* Carrossel 2 (Direita) - 100% encostado sem gaps */}
         <div className="marquee-container relative z-10 overflow-hidden">
-          <div className="marquee-track-right !gap-0 !py-0">
+          <div className="marquee-track-right !gap-0 !py-0" style={{ animationDuration: '32s' }}>
             {[...row2, ...row2].map((imgName, idx) => (
               <div
                 key={idx}
@@ -83,7 +86,27 @@ export default function ModelCarousel() {
               >
                 <img
                   src={`/assets/images/carousel/${imgName}`}
-                  alt={`Modelo 3D STL ${idx + 19}`}
+                  alt={`Modelo 3D STL ${imgName}`}
+                  className="w-full aspect-[3/5] object-cover opacity-95 hover:opacity-100 transition-opacity block"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Carrossel 3 (Esquerda) - 100% encostado sem gaps */}
+        <div className="marquee-container relative z-10 overflow-hidden">
+          <div className="marquee-track-left !gap-0 !py-0" style={{ animationDuration: '32s' }}>
+            {[...row3, ...row3].map((imgName, idx) => (
+              <div
+                key={idx}
+                className="rounded-none overflow-hidden shrink-0 w-40 md:w-64 border-0 p-0 m-0 leading-none"
+              >
+                <img
+                  src={`/assets/images/carousel/${imgName}`}
+                  alt={`Modelo 3D STL ${imgName}`}
                   className="w-full aspect-[3/5] object-cover opacity-95 hover:opacity-100 transition-opacity block"
                   loading="lazy"
                   decoding="async"
