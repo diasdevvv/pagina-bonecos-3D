@@ -116,44 +116,6 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
 
           {/* Plano Completo - R$ 37,90 (ACESSO 3D PRO) */}
           <div className="w-full max-w-md mx-auto bg-[#0F0F14]/90 backdrop-blur-md border-2 border-[#e52521] rounded-none overflow-hidden relative shadow-2xl flex flex-col justify-between transform lg:-translate-y-4">
-            {/* Personagens Espiando nas Laterais do Card ACESSO 3D PRO */}
-            {/* Piloto F1 espiando no canto esquerdo */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="absolute left-[-35%] top-[38%] -translate-y-1/2 z-20 pointer-events-none overflow-hidden"
-            >
-              <img
-                src="/assets/images/sports_f1_driver.webp"
-                alt="Piloto F1 Lego espiando"
-                width={320}
-                height={400}
-                className="h-28 sm:h-36 md:h-44 object-contain transform rotate-12 -translate-x-6 sm:-translate-x-8 md:-translate-x-10 drop-shadow-[0_12px_24px_rgba(0,0,0,0.95)]"
-                loading="lazy"
-                decoding="async"
-              />
-            </motion.div>
-
-            {/* Jogador de Futebol espiando no canto direito */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="absolute right-[-35%] top-[62%] -translate-y-1/2 z-20 pointer-events-none overflow-hidden"
-            >
-              <img
-                src="/assets/images/sports_soccer_player.webp"
-                alt="Jogador de Futebol Lego espiando"
-                width={320}
-                height={400}
-                className="h-28 sm:h-36 md:h-44 object-contain transform -rotate-12 translate-x-6 sm:translate-x-8 md:translate-x-10 drop-shadow-[0_12px_24px_rgba(0,0,0,0.95)]"
-                loading="lazy"
-                decoding="async"
-              />
-            </motion.div>
 
             <div>
               <div className="py-6 text-center relative bg-gradient-to-b from-[#1e1414] to-[#0F0F14]">
@@ -209,20 +171,6 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
                   <li className="flex items-center gap-3">
                     <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
                     <span className="leading-tight text-white font-semibold flex items-center gap-2">
-                      Coleção F1 Corrida
-
-                    </span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
-                    <span className="leading-tight text-white font-semibold flex items-center gap-2">
-                      Coleção Copa 2026 + Taça
-
-                    </span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
-                    <span className="leading-tight text-white font-semibold flex items-center gap-2">
                       Coleção Especial Natal
                       <span className="bg-[#e52521] text-white text-[10px] font-black uppercase px-1.5 py-0.5 rounded-none tracking-wider shadow-sm">
                         NOVO
@@ -238,6 +186,21 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
                       </span>
                     </span>
                   </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
+                    <span className="leading-tight text-white font-semibold flex items-center gap-2">
+                      Coleção F1 Corrida
+
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
+                    <span className="leading-tight text-white font-semibold flex items-center gap-2">
+                      Coleção Copa 2026 + Taça
+
+                    </span>
+                  </li>
+
                   <li className="flex items-center gap-3">
                     <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
                     <span className="leading-tight text-white font-semibold">Coleção Animes</span>

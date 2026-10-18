@@ -5,9 +5,8 @@ export default function ModelCarousel() {
   // 95 novas imagens otimizadas da pasta carousel (Image01.webp até Image95.webp)
   const formatName = (num) => `Image${String(num).padStart(2, '0')}.webp`;
 
-  const row1 = Array.from({ length: 32 }, (_, i) => formatName(i + 1));
-  const row2 = Array.from({ length: 32 }, (_, i) => formatName(i + 33));
-  const row3 = Array.from({ length: 31 }, (_, i) => formatName(i + 65));
+  const row1 = Array.from({ length: 48 }, (_, i) => formatName(i + 1));
+  const row2 = Array.from({ length: 47 }, (_, i) => formatName(i + 49));
 
   return (
     <section className="pt-4 sm:pt-6 md:pt-8 pb-0 relative z-30 bg-black border-b border-white/10 overflow-visible">
@@ -24,7 +23,7 @@ export default function ModelCarousel() {
       </div>
 
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
-        <div className="text-right mb-4 sm:mb-6 flex flex-col items-end justify-end pr-2 sm:pr-4 md:pr-8">
+        <div className="mb-4 sm:mb-6 flex flex-col items-end justify-end pr-2 sm:pr-4 md:pr-8">
           {/* Texto Superior */}
           <span className="text-[#249831] font-display font-black text-sm sm:text-base md:text-lg uppercase tracking-widest mb-1.5 drop-shadow-md">
             O que você vai levar?
@@ -34,6 +33,11 @@ export default function ModelCarousel() {
           <h2 className="font-display font-black text-3xl sm:text-5xl md:text-6xl tracking-tight text-white uppercase drop-shadow-2xl text-right leading-tight">
             UMA SURRA DE <br /><span className="text-[#249831]">QUALIDADE</span>
           </h2>
+
+          {/* Aviso: apenas alguns modelos */}
+          <p className="text-white/50 text-xs sm:text-sm font-medium mt-2 tracking-wide italic">
+            ↓ Alguns dos modelos incluídos no pack ↓
+          </p>
         </div>
       </div>
 
@@ -96,25 +100,6 @@ export default function ModelCarousel() {
           </div>
         </div>
 
-        {/* Carrossel 3 (Esquerda) - 100% encostado sem gaps */}
-        <div className="marquee-container relative z-10 overflow-hidden">
-          <div className="marquee-track-left !gap-0 !py-0" style={{ animationDuration: '32s' }}>
-            {[...row3, ...row3].map((imgName, idx) => (
-              <div
-                key={idx}
-                className="rounded-none overflow-hidden shrink-0 w-40 md:w-64 border-0 p-0 m-0 leading-none"
-              >
-                <img
-                  src={`/assets/images/carousel/${imgName}`}
-                  alt={`Modelo 3D STL ${imgName}`}
-                  className="w-full aspect-[3/5] object-cover opacity-95 hover:opacity-100 transition-opacity block"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
