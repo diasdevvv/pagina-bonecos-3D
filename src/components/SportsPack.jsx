@@ -4,35 +4,7 @@ import { motion } from 'framer-motion';
 export default function SportsPack() {
   return (
     <div className="relative w-full flex flex-col">
-      {/* ==================== SEÇÃO VISUAL PRINCIPAL: NATAL + HALLOWEEN ==================== */}
-      <section className="relative z-20 w-full overflow-hidden bg-black border-b border-white/10 flex flex-col items-center justify-between min-h-[520px] md:min-h-[680px]">
-
-        {/* TÍTULO NO TOPO DA SEÇÃO: NOVIDADE */}
-        <div className="absolute top-6 sm:top-8 md:top-10 inset-x-0 z-40 text-center flex items-center justify-center pointer-events-none px-4">
-          <motion.span
-            animate={{ scale: [1, 1.06, 1] }}
-            transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
-            className="bg-[#e52521] text-white font-display font-black text-2xl sm:text-4xl md:text-5xl py-2.5 px-8 sm:px-12 uppercase tracking-widest rounded-none border-2 border-white/20 shadow-[0_0_35px_rgba(229,37,33,0.7)]"
-          >
-            NOVIDADE
-          </motion.span>
-        </div>
-
-        {/* IMAGEM FULL-WIDTH */}
-        <div className="absolute inset-0 w-full h-full z-0">
-          <img
-            src="/assets/images/pack_natal_halloween_split.webp"
-            alt="Pack Natal e Halloween LEGO 3D"
-            className="absolute inset-0 w-full h-full object-cover object-center"
-            loading="lazy"
-            decoding="async"
-          />
-          {/* Gradiente inferior para fundir com a barra de cards */}
-          <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black via-black/60 to-transparent pointer-events-none" />
-        </div>
-      </section>
-
-      {/* ==================== BARRA ACOPLADA FULL WIDTH ==================== */}
+      {/* ==================== LINHA DE PACKS: NATAL & HALLOWEEN ==================== */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -40,20 +12,17 @@ export default function SportsPack() {
         transition={{ duration: 0.7 }}
         className="w-full relative z-30 flex flex-col border-b border-white/10"
       >
-        {/* LINHA DE PACKS: COPA DO MUNDO, NATAL & HALLOWEEN */}
         <div className="w-full flex flex-col md:flex-row">
-          {/* CARD 1 (1/3): COPA DO MUNDO 2026 */}
-
-
-          {/* CARD 2 (1/2): PACK NATAL */}
+          {/* CARD 1 (1/2): PACK NATAL */}
           <div className="relative w-full md:w-1/2 overflow-hidden border-b md:border-b-0 md:border-r border-white/10 group">
             <div className="aspect-video w-full relative">
               <img
                 src="/assets/images/pack_natal_16x9.webp"
                 alt="Pack Natal Lego 3D"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                style={{ filter: 'brightness(1.08) contrast(1) saturate(1)' }}
-                loading="lazy" decoding="async" />
+                loading="lazy"
+                decoding="async"
+              />
 
               <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-10 pointer-events-none" />
 
@@ -73,15 +42,16 @@ export default function SportsPack() {
             </div>
           </div>
 
-          {/* CARD 3 (1/2): PACK HALLOWEEN */}
+          {/* CARD 2 (1/2): PACK HALLOWEEN */}
           <div className="relative w-full md:w-1/2 overflow-hidden group">
             <div className="aspect-video w-full relative">
               <img
                 src="/assets/images/pack_halloween_16x9.webp"
                 alt="Pack Halloween Terror Lego 3D"
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                style={{ filter: 'brightness(1.08) contrast(1) saturate(1)' }}
-                loading="lazy" decoding="async" />
+                loading="lazy"
+                decoding="async"
+              />
 
               <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-10 pointer-events-none" />
 

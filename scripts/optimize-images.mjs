@@ -19,9 +19,8 @@ for (const img of images) {
 
   await sharp(inputPath)
     .resize({ width: img.width, withoutEnlargement: true })
-    .modulate({ saturation: 1.45, brightness: 1.05 })
-    .linear(1.15, -(0.15 * 128))
-    .webp({ quality: 82, effort: 6 })
+    .modulate({ saturation: 1.0, brightness: 1.0 })
+    .webp({ quality: 84, effort: 6 })
     .toFile(tmpPath);
 
   renameSync(tmpPath, inputPath);

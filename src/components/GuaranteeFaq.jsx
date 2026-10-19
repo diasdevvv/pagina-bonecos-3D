@@ -10,6 +10,10 @@ export default function GuaranteeFaq() {
       a: 'O acesso é 100% imediato e enviado para o seu e-mail logo após a confirmação do pagamento. Você receberá um login e senha para acessar nossa plataforma organizada com todos os arquivos prontos para download.'
     },
     {
+      q: 'Quantos Modelos existem no acesso?',
+      a: 'São mais de 1.500 modelos disponíveis! Além de uma imensa variedade de personagens icônicos, você encontra capacetes, espadas, veículos e acessórios temáticos — tudo no autêntico formato LEGO e 100% pronto para impressão.'
+    },
+    {
       q: 'Quais impressoras são compatíveis com os modelos?',
       a: 'Todos os modelos são compatíveis com qualquer impressora 3D do mercado, sejam elas FDM (filament: Creality, Bambu Lab, Ender, Artillery, Neptune, Prusa) ou de Resina (Elegoo, Anycubic, Phrozen).'
     },

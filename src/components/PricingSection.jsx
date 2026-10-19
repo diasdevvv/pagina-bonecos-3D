@@ -127,7 +127,7 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
               <div className="bg-gradient-to-r from-[#e52521] via-[#006cb7] to-[#e52521] py-3 px-4 shadow-lg">
                 <p className="font-black text-white text-center">
                   <span className="block text-[11px] md:text-[13px] uppercase tracking-[0.2em] opacity-90 mb-0.5">O MAIS COMPLETO DO MERCADO</span>
-                  <span className="block text-sm md:text-base uppercase tracking-tight">+500 MODELOS LEGO STL/3MF + TODAS COLEÇÕES + BÔNUS</span>
+                  <span className="block text-sm md:text-base uppercase tracking-tight">MODELOS LEGO STL/3MF + TODAS COLEÇÕES + BÔNUS</span>
                 </p>
               </div>
 
@@ -166,7 +166,7 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
                 <ul className="w-full text-left flex flex-col gap-3 text-sm text-white/90 font-medium border-t border-white/10 pt-6 mb-6">
                   <li className="flex items-center gap-3">
                     <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
-                    <span className="leading-tight font-bold text-white">+500 Modelos LEGO STL/3MF</span>
+                    <span className="leading-tight font-bold text-white">Modelos LEGO STL/3MF</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="text-[#e52521] font-bold text-lg leading-none">✓</span>
@@ -262,8 +262,8 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
                     <span className="leading-tight text-white font-bold">Bônus 2: Pack Acessórios Lego</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <img src="/assets/images/bonus_construcao.webp" alt="Bônus 3" className="w-7 h-7 object-contain rounded-none shrink-0" loading="lazy" decoding="async" />
-                    <span className="leading-tight text-white font-bold">Bônus 3: Pack Construção</span>
+                    <img src="/assets/images/bonus3.webp" alt="Bônus 3" className="w-7 h-7 object-contain rounded-none shrink-0" loading="lazy" decoding="async" />
+                    <span className="leading-tight text-white font-bold">Bônus 3: Grupo de Promoção</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <img src="/assets/images/bonus2.webp" alt="Bônus 4" className="w-7 h-7 object-contain rounded-none shrink-0" loading="lazy" decoding="async" />
@@ -347,14 +347,14 @@ export default function PricingSection({ isUpsellOpen: controlledUpsellOpen, set
               </h3>
 
               <p className="text-white/80 text-xs sm:text-sm mb-4 leading-relaxed max-w-md mx-auto">
-                Por apenas <strong>mais R$ 18,00</strong>, desbloqueie a coleção completa com todos os +500 modelos, novas coleções todo mês e todos os 5 super bônus!
+                Por apenas <strong>mais R$ 18,00</strong>, desbloqueie a coleção completa com todos os modelos, novas coleções todo mês e todos os 5 super bônus!
               </p>
 
               {/* Mini Lista de Vantagens */}
               <div className="bg-black/70 border border-white/10 p-3.5 sm:p-4 mb-4 text-left text-xs sm:text-sm space-y-2">
                 <div className="flex items-center gap-2 text-white font-semibold">
                   <span className="text-[#00e676] font-bold text-sm">✓</span>
-                  <span><strong>+500 Modelos LEGO STL/3MF</strong> (vs apenas 50 do básico)</span>
+                  <span><strong>Coleção Completa de Modelos LEGO STL/3MF</strong></span>
                 </div>
                 <div className="flex items-center gap-2 text-white font-semibold">
                   <span className="text-[#00e676] font-bold text-sm">✓</span>

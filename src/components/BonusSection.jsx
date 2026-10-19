@@ -20,8 +20,8 @@ export default function BonusSection() {
     },
     {
       badge: 'BÔNUS 3',
-      title: 'Pack Construção',
-      img: 'bonus_construcao.webp',
+      title: 'GRUPO DE PROMOÇÃO',
+      img: 'bonus3.webp',
       value: 'R$ 67,00',
       color: 'bg-[#006cb7]',
       border: 'border-[#006cb7]/40'

@@ -77,7 +77,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="uppercase font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white tracking-tight leading-[1.22] mb-[-37px] drop-shadow-2xl text-center max-w-4xl pt-0"
         >
-          <span className="text-[#006cb7]">+500</span> Modelos<br /><span>Estilo <span className="text-[#006cb7] ">LEGO </span></span><br />
+          Modelos<br /><span>Estilo <span className="text-[#006cb7] ">LEGO </span></span><br />
 
           Para sua<br /><span> Impressora 3D</span>
           <br />
